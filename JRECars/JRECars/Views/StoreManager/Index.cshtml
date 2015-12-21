@@ -1,0 +1,78 @@
+﻿@model IEnumerable<JRECars.Models.CarViewModel>
+
+@{
+    ViewBag.Title = "Cars Catalog";
+}
+
+<p id="mini-tags">Cars Catalog</p>
+
+
+<div class="caption">
+    Inventory
+    @if (this.User.IsInRole("Admin"))
+    {
+        <a href="@Url.Action("Create", "StoreManager")" class="a-buttons">
+            <img src="@Url.Content("~/Content/images/Icon_11-512.png")" style="height: 25px; width: 25px; display: inline-block" />
+            Car
+        </a>
+        <a href="@Url.Action("AddManufacturer", "StoreManager")" class="a-buttons">
+            <img src="@Url.Content("~/Content/images/Icon_11-512.png")" style="height: 25px; width: 25px; display: inline-block" />
+            Manufacturer
+        </a>
+    }
+
+</div>
+
+<div id="table">
+    <div class="header-row row">
+
+        <span class="cell primary">Model</span>
+        <span class="cell">Price</span>
+        <span class="cell">Manufacturer</span>
+        <span class="cell">Year of manufacture</span>
+        <span class="cell">HP</span>
+        <span class="cell">Kilometers</span>
+        <span class="cell">Image</span>
+        <span class="cell">Actions</span>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <span class="cell primary" data-label="Model">
+                @Html.DisplayFor(modelItem => item.Model)
+            </span>
+            <span class="cell" data-label="Price">
+                @Html.DisplayFor(modelItem => item.Price)
+            </span>
+            <span class="cell" data-label="Manufacturer">
+                @Html.DisplayFor(modelItem => item.ManufacturerName)
+            </span>
+            <span class="cell" data-label="Year of manufacture">
+                @Html.DisplayFor(modelItem => item.YearOfManufacture)
+            </span>
+            <span class="cell" data-label="HP">
+                @Html.DisplayFor(modelItem => item.HorsePower)
+            </span>
+            <span class="cell" data-label="Kilometers">
+                @Html.DisplayFor(modelItem => item.Kilometers)
+            </span>
+            <span class="cell" data-label="Image" id="rightImage">
+                <img src=@Url.Action("GetImage", "StoreManager", new {carId = item.CarId}) style="width: 190px; height: 140px; border: 2px solid #ffa500; margin: 10px;" />
+            </span>
+
+            <span class="cell" data-label="Actions">
+                @if (this.User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CarId }, new { @class = "action-links" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CarId }, new { @class = "action-links" })
+}
+                @Html.ActionLink("Details", "Details", new { id = item.CarId })
+                @*<a href="@Url.Action("AddToCart", "Cart", new {carId = item.CarId})">Add to Cart </a>*@
+
+            </span>
+        </div>
+    }
+
+</div>
+

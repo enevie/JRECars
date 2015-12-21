@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.WebApi.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.WebApi.Contracts.ApiRequest">
+            <summary>
+            A request that is passsed to the API for processing.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.WebApi.Contracts.ApiRequest.#ctor(MNoreke.Public.Auth.SessionAuthUser,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.WebApi.Contracts.ApiResponse">
+            <summary>
+            A resonse that is returned from the API after processing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.ApiResponse.Status">
+            <summary>
+            The status of this request.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.ApiResponse.ErrorMessages">
+            <summary>
+            The error messages if any for this response.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.WebApi.Contracts.ApiResponse.#ctor(MNoreke.Public.Auth.SessionAuthUser,MNoreke.Public.WebApi.Contracts.ApiRequest)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.WebApi.Contracts.BaseApiCall">
+            <summary>
+            The base contents of calls and from the API.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.BaseApiCall.UserIdentifier">
+            <summary>
+            The identifier for the user making the request.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.BaseApiCall.TrackingID">
+            <summary>
+            The tracking ID to ensure that the request and response map up.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.BaseApiCall.Function">
+            <summary>
+            The function this call is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.WebApi.Contracts.BaseApiCall.DataObject">
+            <summary>
+            The data object (of variable type) that is tied to this call.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.WebApi.Contracts.BaseApiCall.#ctor(MNoreke.Public.Auth.SessionAuthUser)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.WebApi.Contracts.CoreFunctions">
+            <summary>
+            A collection of common functions that can be called through the API.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.WebApi.Contracts.CoreFunctions.AddressGetClientAddresses">
+            <summary>
+            Calls the API to list all addresses for a given client.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.WebApi.Contracts.CoreFunctions.AddressAddClientAddress">
+            <summary>
+            Calls the API to add an address to the current client.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1743 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Ef.DataModel</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking">
+            <summary>
+            A tracking record for QuickBooks integrations.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking.TrackingID">
+            <summary>
+            Unique Identifier for an Intuit entity (object). Required for the update operation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking.SyncToken">
+            <summary>
+            Version number of the entity. Required for the update operation. 
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking.Active">
+            <summary>
+            If true, this entity is currently enabled for use by QuickBooks.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking.DataItemID">
+            <summary>
+            The data item this tracking record is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking.DataType">
+            <summary>
+            The data item this tracking record is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.App.AppModule">
+            <summary>
+            The definition of an application module.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModule.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModule.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModule.AccessLevels">
+            <summary>
+            The AccessLevels for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel">
+            <summary>
+            The access level for a given level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel.Description">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel.ModuleID">
+            <summary>
+            The Module this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel.Module">
+            <summary>
+            The Module this is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization">
+            <summary>
+            The authorization to access a client. Does not extend from ClientBasedItem in case there are changes for the
+            base class down the road.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.IsActiveClient">
+            <summary>
+            Is this the currently active client?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.ClientID">
+            <summary>
+            The ID of the client this item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.Client">
+            <summary>
+            The client this item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.SystemUserID">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.SystemUser">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization.AccessLevels">
+            <summary>
+            The AccessLevels for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess">
+            <summary>
+            The access of a user to a specific area of the application.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess.ClientAuthorizationID">
+            <summary>
+            The ClientAuthorization this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess.ClientAuthorization">
+            <summary>
+            The ClientAuthorization this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess.AccessLevelID">
+            <summary>
+            The AccessLevel this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess.AccessLevel">
+            <summary>
+            The AccessLevel this is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Auth.SystemUser">
+            <summary>
+            A system user
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.Auth.SystemUser.EDIT_FIELDS_TO_BIND">
+            <summary>
+            The fields to bind for editing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.UserIdentifier">
+            <summary>
+            The user key in the security database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.Nickname">
+            <summary>
+            The nick name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.Name">
+            <summary>
+            The name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.PhoneNumber">
+            <summary>
+            The phone number for billing
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.IsAdministrator">
+            <summary>
+            Is this user an administrator? Must be set through direct database access.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.LastLogin">
+            <summary>
+            When did this user last login?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.LocalTimeZoneID">
+            <summary>
+            The time zone for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.LocalTimeZone">
+            <summary>
+            The time zone for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.ClientAuthorizations">
+            <summary>
+            The Access Authorizations for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUser.Preferences">
+            <summary>
+            The preferences for this user.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference">
+            <summary>
+            A system user preference
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference.Preference">
+            <summary>
+            The preference this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference.BoolValue">
+            <summary>
+            The boolean value for this setting.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference.IntValue">
+            <summary>
+            The integer value for this setting.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference.SystemUserID">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Auth.SystemUserPreference.SystemUser">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.BaseDataItem">
+            <summary>
+            A base data item that all entities extend from.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.ID">
+            <summary>
+            The ID/PrimaryKey for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.IsSystemEntry">
+            <summary>
+            Is this entry a system entry that clients cannot modify?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.Visibility">
+            <summary>
+            The visibility for this entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.CreatedDate">
+            <summary>
+            The date this record was created.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.ModifiedDate">
+            <summary>
+            The date this record was last modified.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.BaseDataItem.IsNewItem">
+            <summary>
+            Is this a new item that has not been saved to the database yet?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Bcm.Address">
+            <summary>
+            A unit of measure
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.AddressLine1">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.AddressLine2">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.City">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.State">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.ZipCode">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Address.Country">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Bcm.Address.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Bcm.Organization">
+            <summary>
+            The details about an organization.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.ShortName">
+            <summary>
+            The short name of the organization
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.FullName">
+            <summary>
+            The full name of the organization
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.Website">
+            <summary>
+            The website for this organization.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.Facebook">
+            <summary>
+            The Facebook page for this organization.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.AddressID">
+            <summary>
+            The address for this organization
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Bcm.Organization.Address">
+            <summary>
+            The address for this organization
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Billing.BillingItemCode">
+            <summary>
+            A tracking entry for a line item type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.BillingItemCode.ItemCode">
+            <summary>
+            The billing code for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.BillingItemCode.Description">
+            <summary>
+            The billing description for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.BillingItemCode.Amount">
+            <summary>
+            The amount for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Billing.ClientPayment">
+            <summary>
+            Tracks the payment details for a client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.BillingTrackingID">
+            <summary>
+            The ID for tracking the billing ECheck request. This prevents duplicate billing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.ECheckID">
+            <summary>
+            The ID in the billing system for tracking the ECheck once submitted.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.Description">
+            <summary>
+            A description for this payment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.TotalAmount">
+            <summary>
+            The total amount for this payment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.BilledOn">
+            <summary>
+            The date this payment was billed.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.PaymentDate">
+            <summary>
+            The date this payment was made.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.AmountPaid">
+            <summary>
+            The amount that was charged (should match Total once sent to billing).
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.Status">
+            <summary>
+            The status of this payment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.LineItems">
+            <summary>
+            The line items for this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Billing.ClientPayment.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem">
+            <summary>
+            A tracking entry for a payment and its status.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.Quantity">
+            <summary>
+            The Quantity for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.RatePerItem">
+            <summary>
+            The rate of this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.Amount">
+            <summary>
+            The total amount for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.PaymentID">
+            <summary>
+            The payment this line item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.Payment">
+            <summary>
+            The payment this line item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.ItemCodeID">
+            <summary>
+            The ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.ItemCode">
+            <summary>
+            The ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Billing.ClientPaymentLineItem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.ClientTrackedItem">
+            <summary>
+            A data item that is client tracked.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.ClientTrackedItem.ClientID">
+            <summary>
+            The ID of the client this item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.ClientTrackedItem.Client">
+            <summary>
+            The client this item is for.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.ClientTrackedItem.Initialize(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.Nullable{System.Int32})">
+            <summary>
+            Initializes the client tracked item.
+            </summary>
+            <param name="authUser">The user who is creating the data.</param>
+            <param name="clientID">The client ID to override the user with.</param>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.DbInitializer.DataScriptVersion">
+            <summary>
+            Data Script Version
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.DataScriptVersion.InitialCommonLibrary">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.DataScriptVersion.QbIntegration">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper">
+            <summary>
+            An initializer for the public parts of the database.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType">
+            <summary>
+            Database Type
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType.String">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType.Numeric">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType.Date">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType.DateTime">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType.Bool">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.ScriptVersion">
+            <summary>
+            The script version to generate.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DefaultCreatedDate">
+            <summary>
+            The default created date.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultSystemScript(MNoreke.Public.Ef.DataModel.DbInitializer.DataScriptVersion)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultAppModuleSqlCommands(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetAppModuleSqlCommand(System.Int32,System.String,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultAppModuleAccessLevelSqlCommands(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultAppModuleAccessLevelsByModuleSqlCommands(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetAppModuleAccessLevelSqlCommand(System.Int32,System.String,System.String,System.Int32,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSystemUserSqlCommand(System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.DateTime,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetBillingItemCodeSqlCommand(System.Int32,System.String,System.String,System.Double,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultNotificationTypeSqlCommands(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetNotificationTypeSqlCommand(System.Int32,System.String,System.Boolean,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultDiscussionForumSqlCommands(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDiscussionForumSqlCommand(System.Int32,System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Boolean,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDashboardPanelTypeSqlCommand(System.Int32,System.String,System.String,MNoreke.Public.Ef.Contracts.DashboardPanelReportType,System.Int32,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary>
+            Gets a SQL command for adding a dashboard panel type.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetLocalTimeZoneSqlCommands">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetApplicationFeatureGroupSqlScript(System.Int32,System.String,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetApplicationFeatureSqlScript(System.Int32,System.Int32,System.String,System.Int32,System.DateTime,System.Boolean,System.Boolean,MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability)">
+            <summary>
+            Gets the SQL for adding an application feature.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetClientSqlCommand(System.Int32,System.String,System.Int32,System.Int32,MNoreke.Public.Ef.Contracts.BillingInterval,System.DateTime,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetDefaultClientConfigurationTypeSqlCommand(System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetClientConfigurationTypeSqlCommand(System.Int32,System.String,System.String,MNoreke.Public.Ef.Contracts.RequiredDataType,System.Boolean,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetClientProgramSqlCommand(System.Int32,System.String,System.String,System.Boolean,System.String,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSubscriptionFeatureSqlCommand(System.Int32,System.Int32,System.Int32,MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus,System.String,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSubscriptionLevelFeatureToggleSqlCommand(System.Int32,System.Int32,MNoreke.Public.Ef.Contracts.FeatureToggleType,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSubscriptionLevelSqlCommand(System.Int32,System.String,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSubscriptionLevelSqlCommandInitialCommonLibrary(System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean,System.Double,System.Double,System.Int32,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSubscriptionTypeSqlCommand(System.Int32,System.String,System.DateTime,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.ResetFieldArrays">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.AddDefaultFields(System.Boolean,MNoreke.Public.Ef.Contracts.RecordVisibility,System.DateTime,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.AddField(System.String,System.Object,MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.DbType)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetUpsertQuery(System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.DbInitializer.PublicDbInitHelper.GetSqlDataValue(System.Int32)">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.ICustomSaveAction">
+            <summary>
+            Indicates that the implementer has a custom save action.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.ICustomSaveAction.ExecuteCustomSaveAction(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,MNoreke.Public.Ef.DataModel.MultiTenantDataContext)">
+            <summary>
+            Executes the custom save action.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum">
+            <summary>
+            A discussion forum.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.DataItemIdentifier">
+            <summary>
+            The data item this discussion forum is tied to.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.IsPinned">
+            <summary>
+            Is this forum pinned?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.IsAdminLocked">
+            <summary>
+            Is this forum pinned?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.AppModuleID">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.AppModule">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.ReadAccessLevelID">
+            <summary>
+            The ReadAccessLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.ReadAccessLevel">
+            <summary>
+            The ReadAccessLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.WriteAccessLevelID">
+            <summary>
+            The WriteAccessLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.WriteAccessLevel">
+            <summary>
+            The WriteAccessLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.DiscussionForum.ForumEntries">
+            <summary>
+            The Notifications for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.EmailTracking">
+            <summary>
+            A log of emails that have been sent.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.From">
+            <summary>
+            The address this email was sent from.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.RecipientList">
+            <summary>
+            The recipient list of this email.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.Subject">
+            <summary>
+            The subject of this email.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.Body">
+            <summary>
+            The body of the email.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.IsHtml">
+            <summary>
+            Is the body of this email in HTML?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.Status">
+            <summary>
+            The status of this email.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.SentOn">
+            <summary>
+            The time stamp of when this email was sent.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.EmailTracking.ErrorMessage">
+            <summary>
+            The Exception Message for errors sending the email.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.ForumEntry">
+            <summary>
+            An entry into a forum.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.Content">
+            <summary>
+            The content of this comment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.DiscussionForumID">
+            <summary>
+            The DiscussionForum this is a comment for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.DiscussionForum">
+            <summary>
+            The DiscussionForum this is a comment for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.AuthorID">
+            <summary>
+            The author of this comment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.Author">
+            <summary>
+            The author of this comment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.ReplyToID">
+            <summary>
+            The comment this is a reply to.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.ReplyTo">
+            <summary>
+            The comment this is a reply to.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.ForumEntry.Replies">
+            <summary>
+            The comments for this post.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.Notification">
+            <summary>
+            A class for tracking a notification that needs to be shown to the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.Notification.Message">
+            <summary>
+            The message for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.Notification.PriorityLevel">
+            <summary>
+            The PriorityLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.Notification.NotificationTypeID">
+            <summary>
+            The NotificationType of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.Notification.NotificationType">
+            <summary>
+            The NotificationType of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.NotificationType">
+            <summary>
+            Defines the type of notification.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationType.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationType.IsDismissable">
+            <summary>
+            Is this notification type dismissable?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationType.AccessLevelID">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationType.AccessLevel">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationType.Notifications">
+            <summary>
+            The Notifications for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy">
+            <summary>
+            Tracks who has seen a specific notification.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.Dismissed">
+            <summary>
+            Was this notification dismissed by the user?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.Emailed">
+            <summary>
+            Was this notification emailed?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.NotificationID">
+            <summary>
+            The Notification of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.Notification">
+            <summary>
+            The Notification of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.SystemUserID">
+            <summary>
+            The SystemUser of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Msg.NotificationViewedBy.SystemUser">
+            <summary>
+            The NotificationType of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.MultiTenantDataContext">
+            <summary>
+            A multi-tenant Database Context for Entity Framework.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.BaseAuthUser">
+            <summary>
+            The authorized user that is accessing this model.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.QuickBooksTrackings">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.AppModules">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.AppModuleAccessLevels">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SystemUsers">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SystemUserPreferences">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientAuthorizations">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientAuthorizationAccesses">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Addresses">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Organizations">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.EmailTrackings">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.DiscussionForums">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ForumEntries">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Notifications">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.NotificationTypes">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.NotificationViewedBys">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Dashboards">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.DashboardPanels">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.DashboardPanelTypes">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.LocalTimeZones">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Clients">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientPrograms">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientProgramMemberships">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.BillingItemCodes">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientPayments">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientPaymentLineItems">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SubscriptionTypes">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SubscriptionLevels">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ApplicationFeatureGroups">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ApplicationFeatures">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SubscriptionFeatures">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SubscriptionLevelFeatureToggles">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientConfigurations">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.ClientConfigurationTypes">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.EnabledFeatureToggles">
+            <summary>
+            The list of items that are in the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.#ctor(System.String,MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Overrides some model creation items.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.Reload``1(``0)">
+            <summary>
+            Reloads a data object.
+            </summary>
+            <typeparam name="T">The type of the object.</typeparam>
+            <param name="entity">The entity to reload.</param>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SaveChanges">
+            <summary>
+            Saves the changes to the data context.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.AddCustomSaveProcessing(System.Type,MNoreke.Public.Ef.DataModel.CustomSaveProcessing)">
+            <summary>
+            Adds a custom processing to the DAL.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetOriginalValue(System.Object,System.String)">
+            <summary>
+            Gets the original value for the specified property.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SharedClientID">
+            <summary>
+            The shared client ID.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.SharedClient">
+            <summary>
+            The shared client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.FindClient(System.Nullable{System.Int32})">
+            <summary>
+            Finds the specified client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.FindApplicationClient(System.Nullable{System.Int32})">
+            <summary>
+            Finds the specified client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetClientConfiguration(System.Int32,System.Boolean)">
+            <summary>
+            Gets the client configuration for the current user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.NewSystemUser">
+            <summary>
+            Creates a new item and adds it to the model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.NewSystem``1">
+            <summary>
+            Creates a new item and adds it to the model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetCustomSystemType``1">
+            <summary>
+            Creates a custom system type.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.NewClient``1(System.Nullable{System.Int32})">
+            <summary>
+            Creates a new item and adds it to the model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetAllSystemUsers">
+            <summary>
+            Gets all items the current user has access to.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetAllSystem``1">
+            <summary>
+            Gets all items the current user has access to.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.FindSystemUser(System.Int32)">
+            <summary>
+            Finds a system user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetAllClient``1(System.Nullable{System.Int32})">
+            <summary>
+            Gets all items the current user has access to.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.FindSystemItem``1(System.Int32)">
+            <summary>
+            Finds an item in the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.FindClientItem``1(System.Int32)">
+            <summary>
+            Finds an item in the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.GetDbSetCustom``1">
+            <summary>
+            Gets custom DB Sets from the extending implementation.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.HardDelete(MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel)">
+            <summary>
+            Hard deletes from the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.HardDelete(MNoreke.Public.Ef.DataModel.Saas.EnabledFeatureToggle)">
+            <summary>
+            Hard deletes from the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.HardDelete(MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization)">
+            <summary>
+            Hard deletes from the database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.MultiTenantDataContext.HardDelete(MNoreke.Public.Ef.DataModel.Auth.ClientAuthorizationAccess)">
+            <summary>
+            Hard deletes from the database.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.GetDataContextDelegate">
+            <summary>
+            A delegate to return an initialized data context.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.CustomSaveProcessing">
+            <summary>
+            Provides for custom save processing for a given object.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Presentation.Dashboard">
+            <summary>
+            A dashboard definition
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.Dashboard.SystemUserID">
+            <summary>
+            The system user this dashboard is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.Dashboard.ModuleID">
+            <summary>
+            The module this dashboard is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.Dashboard.Module">
+            <summary>
+            The module this dashboard is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.Dashboard.Panels">
+            <summary>
+            The Locations for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel">
+            <summary>
+            A dashboard definition
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.Name">
+            <summary>
+            Dummy name field for sequencing
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.Sequence">
+            <summary>
+            The sequence this entry is shown in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.Days">
+            <summary>
+            The number of days to report on.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.PanelID">
+            <summary>
+            The dashboard this panel is on.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.Panel">
+            <summary>
+            The panel to be shown in this dashboard slot.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.DashboardID">
+            <summary>
+            The dashboard this panel is on.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel.Dashboard">
+            <summary>
+            The dashboard this panel is on.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType">
+            <summary>
+            A dashboard panel type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.Description">
+            <summary>
+            The Description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.ReportType">
+            <summary>
+            The report type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.ModuleID">
+            <summary>
+            The module this dashboard panel type is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.Module">
+            <summary>
+            The module this dashboard panel type is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.AccessLevelID">
+            <summary>
+            The access level required to view this dashboard panel type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType.AccessLevel">
+            <summary>
+            The access level required to view this dashboard panel type.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Presentation.LocalTimeZone">
+            <summary>
+            The definition of a time zone.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.LocalTimeZone.SystemID">
+            <summary>
+            The system ID for this timezone.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Presentation.LocalTimeZone.Name">
+            <summary>
+            The name of this timezone.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature">
+            <summary>
+            A feature that exists in the application
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.Availability">
+            <summary>
+            The availability of this status.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.Comment">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.ApplicationFeatureGroupID">
+            <summary>
+            The ApplicationFeatureGroup of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature.ApplicationFeatureGroup">
+            <summary>
+            The ApplicationFeatureGroup of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeatureGroup">
+            <summary>
+            A feature group that exists in the application
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeatureGroup.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeatureGroup.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ApplicationFeatureGroup.Features">
+            <summary>
+            The Features for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.Client">
+            <summary>
+            A class for tracking a client within FirkinSense.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.Status">
+            <summary>
+            The status of this client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.CompanyName">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.Acronym">
+            <summary>
+            The acronym for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.LegalName">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.Website">
+            <summary>
+            The website for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.SubscriptionValidThrough">
+            <summary>
+            The date this client subscription is valid through.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.BillingInterval">
+            <summary>
+            The interval this client is billed.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.BillingConfigured">
+            <summary>
+            Is billing configured?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.BillingUserID">
+            <summary>
+            The system user responsible for the billing of this client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.BillingUser">
+            <summary>
+            The system user responsible for the billing of this client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.SubscriptionLevelID">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.SubscriptionLevel">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.SubscriptionTypeID">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.SubscriptionType">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.UserAuthorizations">
+            <summary>
+            The User Authorizations for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.Client.ProgramMemberships">
+            <summary>
+            The programs for this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Saas.Client.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Saas.Client.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.DataModel.Saas.Client.IsMemberOfProgram(System.Int32[])">
+            <summary>
+            Checks if the client is a member of a given program.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration">
+            <summary>
+            The configuration for a client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration.IntValue">
+            <summary>
+            The integer value for this configuration setting.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration.BoolValue">
+            <summary>
+            The boolean value for this configuration setting.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration.StringValue">
+            <summary>
+            The string value for this configuration setting.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration.ConfigurationTypeID">
+            <summary>
+            The ConfigurationType  of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration.ConfigurationType">
+            <summary>
+            The ConfigurationType  of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType">
+            <summary>
+            The configuration for a client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType.Description">
+            <summary>
+            The description of this item.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType.DataType">
+            <summary>
+            The data type this requires.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType.IsUserConfigurable">
+            <summary>
+            Is this configuration entry user editable?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType.Configurations">
+            <summary>
+            The Features for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ClientProgram">
+            <summary>
+            An application program that clients can join.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgram.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgram.ShortDescription">
+            <summary>
+            The short description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgram.PartialViewForDescription">
+            <summary>
+            The name of the partial view for the description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgram.IsUserSelectable">
+            <summary>
+            Is this program selectable by users?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.ClientProgramMembership">
+            <summary>
+            A listing for a program the client has joined.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgramMembership.JoinedOn">
+            <summary>
+            What date did this client join this program?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgramMembership.ProgramID">
+            <summary>
+            The Program of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.ClientProgramMembership.Program">
+            <summary>
+            The Program of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.EnabledFeatureToggle">
+            <summary>
+            The tracking for an enabled feature toggle.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.EnabledFeatureToggle.ToggleType">
+            <summary>
+            The type of toggle this is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature">
+            <summary>
+            A feature for a subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.Status">
+            <summary>
+            The availability of this status.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.Comment">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.SubscriptionLevelID">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.SubscriptionLevel">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.ApplicationFeatureID">
+            <summary>
+            The ApplicationFeature of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature.ApplicationFeature">
+            <summary>
+            The ApplicationFeature of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel">
+            <summary>
+            A subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.IsSelectable">
+            <summary>
+            Is this entry selectable by a client?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.MaximumAnnualProductionBBL">
+            <summary>
+            The max production level for this subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.SetupItemCodeID">
+            <summary>
+            The ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.SetupItemCode">
+            <summary>
+            The ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.MonthlyFeeItemCodeID">
+            <summary>
+            The Monthly ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.MonthlyFeeItemCode">
+            <summary>
+            The Monthly ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.AnnualFeeItemCodeID">
+            <summary>
+            The Annual ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.AnnualFeeItemCode">
+            <summary>
+            The Annual ItemCode for this line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.Features">
+            <summary>
+            The Features for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel.Toggles">
+            <summary>
+            The Enabled Toggles for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevelFeatureToggle">
+            <summary>
+            A toggle that is automatically enabled for a subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevelFeatureToggle.ToggleType">
+            <summary>
+            The type of toggle this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevelFeatureToggle.SubscriptionLevelID">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevelFeatureToggle.SubscriptionLevel">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.Saas.SubscriptionType">
+            <summary>
+            The type of subscription.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.DataModel.Saas.SubscriptionType.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.DataModel.SystemTrackedItem">
+            <summary>
+            A system tracked item.
+            </summary>
+        </member>
+    </members>
+</doc>

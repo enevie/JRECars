@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.RestApiUtil</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.RestApiUtil.AuthenticateWebClient">
+            <summary>
+            Authorizes the web request for a given provider we are contacting.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Helpers.JsonConverter.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Type,System.Web.Script.Serialization.JavaScriptSerializer)">
+            <summary>
+            Deserializes an object.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Helpers.JsonConverter.Serialize(System.Object,System.Web.Script.Serialization.JavaScriptSerializer)">
+            <summary>
+            Serializes an object.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Helpers.JsonConverter.SupportedTypes">
+            <summary>
+            Gets a list of supported types.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Helpers.JsonSerialization.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Helpers.JsonWebClient.#ctor(System.Net.CookieContainer,MNoreke.Public.RestApiUtil.AuthenticateWebClient)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.RestApiUtil.JsonDataObject">
+            <summary>
+            A dynamic data object that contains JSON data.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.JsonDataObject.Values">
+            <summary>
+            The values contained within this JSON Data Object.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.JsonDataObject.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.JsonDataObject.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.JsonDataObject.Item(System.String)">
+            <summary>
+            Gets/Sets the specified value
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.RestApiUtil.RestApiUtility">
+            <summary>
+            A utility class for communicating with REST APIs.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.RestApiUtility.#ctor(MNoreke.Public.RestApiUtil.AuthenticateWebClient)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.RestApiUtility.Post(System.Uri,MNoreke.Public.RestApiUtil.JsonDataObject,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Performs a post of data to the provided URI.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.RestApiUtility.Post(System.Uri,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Performs a post of data to the provided URI.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.RestApiUtility.Get(System.Uri,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Performs a get of data from the provided URI.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Web.RestHttpUtility.#ctor(MNoreke.Public.RestApiUtil.AuthenticateWebClient)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.RestApiUtil.Web.RestResponse">
+            <summary>
+            A response to a REST call.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Web.RestResponse.StatusCode">
+            <summary>
+            The status code that was returned.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Web.RestResponse.StatusDescription">
+            <summary>
+            The descriptive name of the status code.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Web.RestResponse.Status">
+            <summary>
+            The overall status of the request/response operation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Web.RestResponse.RawResponse">
+            <summary>
+            The raw response that was returned.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.RestApiUtil.Web.RestResponse.DataObject">
+            <summary>
+            The data object that was parsed from the raw response.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.RestApiUtil.Web.RestResponse.#ctor(MNoreke.Public.Utilities.MethodStatus,System.String,System.Net.HttpStatusCode,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

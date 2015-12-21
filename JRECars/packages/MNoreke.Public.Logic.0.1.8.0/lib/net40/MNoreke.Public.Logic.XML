@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Logic.Accounting.QuickBooksManager">
+            <summary>
+            A manager of QuickBooks integrations
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.Accounting.QuickBooksManager.QbApi">
+            <summary>
+            The API this manager is connected through.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.Initialize">
+            <summary>
+            Initializes this accessor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.LoadCheckingAccountData(MNoreke.Public.Ef.DataModel.Saas.Client,MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate)">
+            <summary>
+            Loads any existing checking account details into the template.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.UpdateCheckingAccount(MNoreke.Public.Ef.DataModel.Saas.Client,MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails)">
+            <summary>
+            Updates a checking account
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.ChargeCustomer">
+            <summary>
+            Charges a customer for any pending payments.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.RunIntegration">
+            <summary>
+            Runs the QB integration for the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.CreateTrackingEntry(MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem,System.Int32,System.Type)">
+            <summary>
+            Creates a new tracking entries.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.SetTrackingEntries(MNoreke.Public.Ef.DataModel.Accounting.QuickBooksTracking,MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem)">
+            <summary>
+            Sets the tracking entries.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Accounting.QuickBooksManager.FindTrackingEntry(System.Int32,System.Type)">
+            <summary>
+            Finds the tracking entry for a given data item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Bcm.AddressManager">
+            <summary>
+            A manager of address information
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.NewAddressTemplate">
+            <summary>
+            Creates a new address
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.FindAddressesForClient">
+            <summary>
+            Find the mailing address in the database for the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.GetClientAddressCount">
+            <summary>
+            Gets the address count for the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.GetClientAddresses">
+            <summary>
+            Gets the addresses for the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.GetAddress(System.Int32)">
+            <summary>
+            Loads an Address
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.AddAddress(MNoreke.Public.Ef.ViewModel.Bcm.AddressData)">
+            <summary>
+            Adds an address to the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Bcm.AddressManager.UpdateAddress(MNoreke.Public.Ef.ViewModel.Bcm.AddressData)">
+            <summary>
+            Updates an address for the current client.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Billing.BillingManager">
+            <summary>
+            A manager for handling billing operations.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Logic.Billing.BillingManager.BillingDisabled">
+            <summary>
+            Is billing disabled?
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Billing.BillingManager.GetBillingTemplate(MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate@)">
+            <summary>
+            Gets a billing template.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Billing.BillingManager.UpdateBilling(MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate)">
+            <summary>
+            Updates the billing for the current client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Billing.BillingManager.FinalizeBilling">
+            <summary>
+            Process Client Billing.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Billing.BillingManager.ProcessClientBilling">
+            <summary>
+            Process Client Billing.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Billing.BillingManager.VerifyBillingRecords(MNoreke.Public.Ef.DataModel.Saas.Client)">
+            <summary>
+            Verifies that billing records exist.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Msg.EmailManager">
+            <summary>
+            The manager for handling emails.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.EmailManager.CreateEmail(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates an email to be sent at a later time.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.EmailManager.SendAllEmails">
+            <summary>
+            Sends any emails that are pending.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Msg.ForumManager">
+            <summary>
+            A manager for messaging.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.ForumManager.GetForums(MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumDataList@)">
+            <summary>
+            Creates a notification to be shown to users.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.ForumManager.GetForum(System.Int32,MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData@)">
+            <summary>
+            Gets a specific forum from the data store.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Msg.NotificationManager">
+            <summary>
+            A manager for messaging.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.NotificationManager.CreateNotification(System.Int32,System.Int32,System.Int32,MNoreke.Public.Ef.Contracts.PriorityLevel,System.String)">
+            <summary>
+            Creates a notification to be shown to users.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.NotificationManager.CancelNotification(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Cancels a notification from being shown to users.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.NotificationManager.MarkNotificationAsViewed(System.Int32)">
+            <summary>
+            Marks a notification as having been viewed by the current user.
+            </summary>
+            <param name="notificationID"></param>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.NotificationManager.DismissNotification(System.Int32)">
+            <summary>
+            Dismisses the specified notification for the current user.
+            </summary>
+            <param name="notificationID"></param>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Msg.NotificationManager.GetNotification">
+            <summary>
+            Gets the notifications to be shown to the user.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Presentation.PresentationManager">
+            <summary>
+            A manager for presentation operations.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Presentation.PresentationManager.FindDashboard(System.Int32)">
+            <summary>
+            Finds the dashboard for the specified module.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Presentation.PresentationManager.GetDashboardViewModel(System.Int32,MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel@)">
+            <summary>
+            Gets the dashboard view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Presentation.PresentationManager.AddPanelToDashboard(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a panel to the dashboard for the current user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Presentation.PresentationManager.RemovePanelFromDashboard(System.Int32)">
+            <summary>
+            Removes a panel from the dashboard of the current user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Presentation.PresentationManager.ChangeDashboardPanel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Changes a panel on the dashboard of the current user.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.PublicLogicBaseDataAccessor">
+            <summary>
+            A base class for building managers within the logic library.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicBaseDataAccessor.PublicLogicManager">
+            <summary>
+            The logic manager that created this accessor.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicBaseDataAccessor.AppViewModelCreator">
+            <summary>
+            The method to call to get an app view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor.Initialize">
+            <summary>
+            Initializes this accessor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor.Dispose">
+            <summary>
+            Disposes references.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1">
+            <summary>
+            A base class for building managers within the logic library.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.LogicManager">
+            <summary>
+            The logic manager that created this accessor.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.DataContext">
+            <summary>
+            The data model for this processor.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClientAuthorization(MNoreke.Public.Ef.DataModel.Auth.ClientAuthorization,System.Boolean)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForSystemUser(MNoreke.Public.Ef.DataModel.Auth.SystemUser,System.Boolean)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForAppModule(MNoreke.Public.Ef.DataModel.App.AppModule)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForAppModuleAccessLevel(MNoreke.Public.Ef.DataModel.App.AppModuleAccessLevel)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForAddress(MNoreke.Public.Ef.DataModel.Bcm.Address)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForDashboardPanel(MNoreke.Public.Ef.DataModel.Presentation.DashboardPanel)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForDashboardPanelType(MNoreke.Public.Ef.DataModel.Presentation.DashboardPanelType)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForDiscussionForum(MNoreke.Public.Ef.DataModel.Msg.DiscussionForum,System.Boolean)">
+            <summary>
+            Gets a view model for a discussion forum.
+            </summary>
+            <param name="sourceData"></param>
+            <param name="deepLoad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForForumEntry(MNoreke.Public.Ef.DataModel.Msg.ForumEntry,System.Boolean)">
+            <summary>
+            Gets a view model for a discussion forum entry.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClient(MNoreke.Public.Ef.DataModel.Saas.Client)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.FillViewModelForClient(MNoreke.Public.Ef.ViewModel.Saas.ClientData,MNoreke.Public.Ef.DataModel.Saas.Client)">
+            <summary>
+            Fills the view model for a client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClientProgram(MNoreke.Public.Ef.DataModel.Saas.ClientProgram)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClientProgramMembership(MNoreke.Public.Ef.DataModel.Saas.ClientProgramMembership)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClientConfiguration(MNoreke.Public.Ef.DataModel.Saas.ClientConfiguration)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForClientConfigurationType(MNoreke.Public.Ef.DataModel.Saas.ClientConfigurationType,System.Boolean)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForApplicationFeatureGroup(MNoreke.Public.Ef.DataModel.Saas.ApplicationFeatureGroup,System.Boolean)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForApplicationFeature(MNoreke.Public.Ef.DataModel.Saas.ApplicationFeature)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForSubscriptionType(MNoreke.Public.Ef.DataModel.Saas.SubscriptionType)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForSubscriptionLevel(MNoreke.Public.Ef.DataModel.Saas.SubscriptionLevel,System.Boolean)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForSubscriptionFeature(MNoreke.Public.Ef.DataModel.Saas.SubscriptionFeature)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.GetViewModelForEnabledFeatureToggle(MNoreke.Public.Ef.DataModel.Saas.EnabledFeatureToggle)">
+            <summary>
+            Gets the view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicBaseDataAccessor`1.FillViewModelForBaseClasses(MNoreke.Public.Ef.DataModel.BaseDataItem,MNoreke.Public.Ef.ViewModel.ViewModelBase)">
+            <summary>
+            Fills the view model base class properties.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.AppViewModelForClient">
+            <summary>
+            Provides for custom save processing for a given object.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.PublicLogicManager">
+            <summary>
+            A data manager
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.UnitTestInProgress">
+            <summary>
+            Is unit testing in progress?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.DataContextFactory">
+            <summary>
+            Sets how to get a data context.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.DataContext">
+            <summary>
+            The data context for this manager.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.AuthUser">
+            <summary>
+            The user that is performing logic operations.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.QuickBooks">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Billing">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Address">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Client">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Email">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Forum">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Notification">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicLogicManager.Presentation">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.Initialize(MNoreke.Public.Auth.SessionAuthUser)">
+            <summary>
+            Initializes this logic manager.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.GetBillingEngine``1">
+            <summary>
+            The manager for the given area.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.GetManager``1">
+            <summary>
+            Gets a manager of the given type.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.Dispose">
+            <summary>
+            Disposes any resources.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicLogicManager.ValidateUserDate(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Validates a user input to be between 2012 and 5 years ahead of today.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.PublicConfigurationSettings">
+            <summary>
+            The settings for this MVC library.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Logic.PublicConfigurationSettings.CONFIG_ERROR">
+            <summary>
+            The common error message for a configuration error.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.BaseNamespaceString">
+            <summary>
+            The top level namespace that any custom classes are in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.GetAuthManager">
+            <summary>
+            What method should be called to get an auth manager?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.GetApiProcessor">
+            <summary>
+            What method should be called to process API requests.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.LoginSuccessController">
+            <summary>
+            The controller to send a user to on login success.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.LoginSuccessAction">
+            <summary>
+            The controller action to send a user to on login success.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.SwitchClientControllerName">
+            <summary>
+            The controller to send a user to after switching clients.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.SwitchClientActionName">
+            <summary>
+            The controller action to send a user to after switching clients.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.PublicConfigurationSettings.SwitchClientRouteValues">
+            <summary>
+            The route values to use when sending a user to after switching clients.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.PublicConfigurationSettings.Configure(MNoreke.Public.Logic.GetAuthManagerDelegate,MNoreke.Public.Logic.GetApiProcessor,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Configures the settings.
+            </summary>
+            <param name="authManager">The delegate to call to get an AuthManager</param>
+            <param name="apiProcessor">The delegate to call to process an API request.</param>
+            <param name="baseNamespaceString">The base namespace of any custom classes. This is used 
+            by reflection for RouteConfiguration and more.</param>
+            <param name="loginSuccessController"></param>
+            <param name="loginSuccessAction"></param>
+            <param name="switchClientControllerName"></param>
+            <param name="switchClientActionName"></param>
+            <param name="switchClientRouteValues"></param>
+        </member>
+        <member name="T:MNoreke.Public.Logic.GetAuthManagerDelegate">
+            <summary>
+            Gets the auth manager to use.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.GetApiProcessor">
+            <summary>
+            Gets the processor of the WebAPI requests.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Saas.ClientManager">
+            <summary>
+            A class that ensures all data for a new brewery is created correctly.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.CurrentUserHasClient">
+            <summary>
+            Checks if the current user has a client or is operating under the shared ClientID
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetAllClients(MNoreke.Public.Ef.ViewModel.Saas.ClientDataList@,System.Boolean)">
+            <summary>
+            Gets a list of all clients.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetAuthorizedClients(MNoreke.Public.Ef.ViewModel.Saas.ClientDataList@)">
+            <summary>
+            Gets a list of all authorized clients.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetSignupTemplate">
+            <summary>
+            Gets a signup template.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.SignUp(MNoreke.Public.Auth.SessionAuthUser,MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData,System.String@)">
+            <summary>
+            Signs up a new brewery and creates default data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetNewApplicationAuthorization">
+            <summary>
+            Gets a new application authorization object.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.LoadClientModel(System.Boolean)">
+            <summary>
+            Loads the client model for the current active subscription.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetChangeSubscriptionModel(MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel@)">
+            <summary>
+            Gets the view model for changing the subscription.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.ChangeSubscriptionLevel(MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel)">
+            <summary>
+            Changes the subscription level.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.UpdateClient(MNoreke.Public.Ef.ViewModel.Saas.ClientData)">
+            <summary>
+            Updates the client with the data provided.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.LoadClientConfigurationData(MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeDataList@)">
+            <summary>
+            Loads the client configuration data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.UpdateClientConfiguration(MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeDataList)">
+            <summary>
+            Updates the client configuration.
+            </summary>
+            <param name="configurationData">The configuration data.</param>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.FindSystemUser(System.String,System.Boolean)">
+            <summary>
+            Finds the specified system user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.UpdateSystemUser(MNoreke.Public.Ef.ViewModel.Auth.SystemUserData)">
+            <summary>
+            Updates a system user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetClientUsers">
+            <summary>
+            Gets a list of users that have access to a client subscription.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.NewClientAuthorizationData">
+            <summary>
+            Gets a new client authorization data object.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.LoadClientAuthorization(System.Int32)">
+            <summary>
+            Loads a client authorization.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.AddClientAuthorization(MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData)">
+            <summary>
+            Adds a client authorization.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.UpdateClientAuthorization(MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData)">
+            <summary>
+            Updates a client authorization.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetClientToggles">
+            <summary>
+            Gets all the toggles for the current client.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.UpdateToggles(MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleDataList)">
+            <summary>
+            Updates the toggles with the provided data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetEditionsViewModel">
+            <summary>
+            Gets the view model for editions.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetProgramDetails(System.Int32,MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData@)">
+            <summary>
+            Gets the details about a program.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.JoinProgram(System.Int32)">
+            <summary>
+            Joins a program for this client.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.GetClientCancellationData(MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData@)">
+            <summary>
+            Gets the cancellation model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Saas.ClientManager.CancelSubscription(MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData)">
+            <summary>
+            Cancels a subscription.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil">
+            <summary>
+            A utility class for manipulating DateTime objects
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalQuarterEffectiveDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime)">
+            <summary>
+            Gets the effective date for a fiscal quarter.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="date">A date in the fiscal quarter.</param>
+            <returns>The effective date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalQuarterExpirationDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime)">
+            <summary>
+            Gets the expiration date for a fiscal quarter.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="date">A date in the fiscal quarter.</param>
+            <returns>The effective date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalYearEffectiveDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime)">
+            <summary>
+            Gets the effective date for a fiscal year.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="date">A date in the fiscal year.</param>
+            <returns>The effective date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalYearEffectiveDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.Int32)">
+            <summary>
+            Gets the effective date for a fiscal year.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="year">The fiscal year you want the date in</param>
+            <returns>The effective date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalYearExpirationDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime)">
+            <summary>
+            Gets the expiration date for a fiscal year.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="date">A date in the fiscal year.</param>
+            <returns>The expiration date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalYearExpirationDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.Int32)">
+            <summary>
+            Gets the expiration date for a fiscal year.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="year">The fiscal year you want the date in</param>
+            <returns>The expiration date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetCurrentFiscalEffectiveDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Gets the dates for the current fiscal effective date.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <returns>The effective date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetCurrentFiscalExpirationDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Gets the dates for the current fiscal expiration date.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <returns>The expiration date to use.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetFiscalQuarterNumber(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime)">
+            <summary>
+            Gets the nubmer of the quarter in a fiscal year.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetPreviousWeekday(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DayOfWeek[])">
+            <summary>
+            Gets the next date that is for the day of week requested.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="daysOfWeek">The days of the week to allow. If null, uses authUser organization working days.</param>
+            <returns>The correct date.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetPreviousWeekday(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime,System.DayOfWeek[])">
+            <summary>
+            Gets the next date that is for the day of week requested.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="daysOfWeek">The days of the week to allow. If null, uses authUser organization working days.</param>
+            <param name="date">The date to check.</param>
+            <returns>The correct date.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetNextWeekday(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DayOfWeek[])">
+            <summary>
+            Gets the next date that is for the day of week requested.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="daysOfWeek">The days of the week to allow. If null, uses authUser division working days.</param>
+            <returns>The correct date.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetNextWeekday(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.DateTime,System.DayOfWeek[])">
+            <summary>
+            Gets the next date that is for the day of week requested.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <param name="date">The date to check.</param>
+            <param name="daysOfWeek">The days of the week to allow. If null, uses authUser division working days.</param>
+            <returns>The correct date.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetNextWeekdayExpirationDate(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Gets an expiration date for the next date that is for the day of week requested.
+            </summary>
+            <param name="authUser">The session auth user to get the fiscal year information for.</param>
+            <returns>The correct date.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetHolidays(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Gets a list of holidays that fall on or between the start and end date.
+            </summary>
+            <param name="authUser">The user who is requesting the data.</param>
+            <param name="countryID">The country to get holidays for.</param>
+            <param name="startDate">The first date to check.</param>
+            <param name="endDate">The last date to check.</param>
+            <returns>A list of holiday dates.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.FindTotalDaysFromWorkingDaysCount(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser,System.Int32,System.DateTime,System.Int32)">
+            <summary>
+            Finds the total days given amount of working days after a start date.
+            </summary>
+            <param name="authUser">The user who is accessing the data.</param>
+            <param name="countryID">The country ID to check.</param>
+            <param name="startDate">The start date within the range.</param>
+            <param name="workingDaysCount">Count of working days.</param>
+            <returns>The number of weekdays that have transpired.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetWorkingDays(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Gets a list of working days, based upon the organization defined days.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.Utilities.FiscalDateTimeUtil.GetNonWorkingDays(MNoreke.Public.Ef.Contracts.BaseSessionAuthUser)">
+            <summary>
+            Gets a list of non-working days, based upon the organization defined days.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.WebAPI.ApiProcessor">
+            <summary>
+            A processor of API requests.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.WebAPI.ApiProcessor.AuthUser">
+            <summary>
+            The user we are processing data for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.WebAPI.ApiProcessor.PublicLogicManager">
+            <summary>
+            The public logic manager we are using.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.WebAPI.ApiProcessor.InitializeSpecificItems">
+            <summary>
+            Initializaes specific items.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.WebAPI.ApiProcessor.ProcessRequest(MNoreke.Public.WebApi.Contracts.ApiRequest)">
+            <summary>
+            Processes a request into a response.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.WebAPI.ApiProcessor.ProcessCoreFunctions(MNoreke.Public.WebApi.Contracts.ApiRequest,MNoreke.Public.WebApi.Contracts.ApiResponse)">
+            <summary>
+            Processes any core functions.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.WebAPI.ApiProcessor.ProcessApplicationFunctions(MNoreke.Public.WebApi.Contracts.ApiRequest,MNoreke.Public.WebApi.Contracts.ApiResponse)">
+            <summary>
+            Processes application specific functions.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Logic.WebAPI.ApiProcessor`1">
+            <summary>
+            A processor of API requests.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Logic.WebAPI.ApiProcessor`1.LogicManager">
+            <summary>
+            The logic manager we are using.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Logic.WebAPI.ApiProcessor`1.InitializeSpecificItems">
+            <summary>
+            Initializaes specific items.
+            </summary>
+        </member>
+    </members>
+</doc>

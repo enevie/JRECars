@@ -1,0 +1,979 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Mvc.AppStart.ApplicationSignInManager">
+            <summary>
+            Configure the application sign-in manager which is used in this application.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.ApplicationSignInManager.#ctor(MNoreke.Public.Mvc.AppStart.ApplicationUserManager,Microsoft.Owin.Security.IAuthenticationManager)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.ApplicationSignInManager.CreateUserIdentityAsync(MNoreke.Public.Mvc.Models.Identity.ApplicationUser)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.ApplicationSignInManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{MNoreke.Public.Mvc.AppStart.ApplicationSignInManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.ApplicationUserManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.ApplicationUserManager.#ctor(Microsoft.AspNet.Identity.IUserStore{MNoreke.Public.Mvc.Models.Identity.ApplicationUser})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.ApplicationUserManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{MNoreke.Public.Mvc.AppStart.ApplicationUserManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.CustomViewEngine">
+            <summary>
+            A custom view engine.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.CustomViewEngine.#ctor(System.String[])">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.EmailService">
+            <summary>
+            A service to send emails.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.EmailService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            Sends a message asynchronously.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.FilterConfig">
+            <summary>
+            The filter configuration
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            The global filter configuration.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.RouteConfig">
+            <summary>
+            A configuration helper for routes.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.RouteConfig.RegisterMvcRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registers routes for MVC.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.RouteConfig.RegisterApiRoutes(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers routes for Web API.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.RouteConstraints.EnumConstraint`1">
+            <summary>
+            A resolver for enum constraints in paths.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.RouteConstraints.EnumConstraint`1.Match(System.Web.HttpContextBase,System.Web.Routing.Route,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteDirection)">
+            <summary>
+            Checks if there is a match.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.SmsService">
+            <summary>
+            An SMS service.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.SmsService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            Sends an SMS message.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.AppStart.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.AppStart.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configures the authentication in a standard fashion.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.WebAPI.CommonApiController">
+            <summary>
+            A common API controller that manages standard transactions using common method structures.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.CommonApiController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.CommonApiController.ProcessRequest(MNoreke.Public.WebApi.Contracts.ApiRequest)">
+            <summary>
+            Processes any requests that come in and return the response object.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.WebAPI.BaseApiController">
+            <summary>
+            A base controller that requires the user be logged in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.WebAPI.BaseApiController.BuildNumber">
+            <summary>
+            The build number for this application.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.WebAPI.BaseApiController.AuthUser">
+            <summary>
+            The user who is accessing the site.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.WebAPI.BaseApiController.AllowMixedMode">
+            <summary>
+            Does this controller allow mixed mode?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.WebAPI.BaseApiController.PublicLogicManager">
+            <summary>
+            Gets the public logic manager for the current request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseApiController.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseApiController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>
+            Initialization of the controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseApiController.InitializeUser(MNoreke.Public.Auth.SessionAuthUser)">
+            <summary>
+            Initializes the user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseApiController.PerformClientLogic">
+            <summary>
+            Performs any application specific client logic for login.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseApiController.View(MNoreke.Public.Utilities.MethodStatus,System.Object)">
+            <summary>
+            Returns the correct view based upon the status.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.WebAPI.BaseAuthorizedController`1">
+            <summary>
+            A base class that provides authorization for a controller.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.WebAPI.BaseAuthorizedController`1.LogicManager">
+            <summary>
+            The logic manager for this controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.WebAPI.BaseAuthorizedController`1.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.Auth.LoginController">
+            <summary>
+            The login controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.#ctor(MNoreke.Public.Mvc.AppStart.ApplicationUserManager,MNoreke.Public.Mvc.AppStart.ApplicationSignInManager)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.Auth.LoginController.SignInManager">
+            <summary>
+            The sign in manager
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.Auth.LoginController.UserManager">
+            <summary>
+            The user manager
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.Login(System.String)">
+            <summary>
+            The login action
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.ExternalLogin(System.String,System.String)">
+            <summary>
+            External Login
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.ExternalLoginCallback(System.String)">
+            <summary>
+            ExternalLoginCallback
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.ExternalLoginConfirmation(MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel,System.String)">
+            <summary>
+            ExternalLoginConfirmation
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.LogOff">
+            <summary>
+            Log off
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.ExternalLoginFailure">
+            <summary>
+            ExternalLoginFailure
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.LoginController.Dispose(System.Boolean)">
+            <summary>
+            Disposes the controller.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController">
+            <summary>
+            The controller for system user operations.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.Controller">
+            <summary>
+            The name of this controller.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.SignInManager">
+            <summary>
+            The signin manager.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.UserManager">
+            <summary>
+            The user manager.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.#ctor(MNoreke.Public.Mvc.AppStart.ApplicationUserManager,MNoreke.Public.Mvc.AppStart.ApplicationSignInManager)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.MyAccountAction">
+            <summary>
+            The action name for MyAccount.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.MyAccount(System.Nullable{MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageMessageId})">
+            <summary>
+            Accesses the My Account endpoint.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.EditUserDetailsAction">
+            <summary>
+            The action name for Edit User Details.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.EditUserDetails">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.EditUserDetails(MNoreke.Public.Ef.ViewModel.Auth.SystemUserData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.RemoveLoginAction">
+            <summary>
+            The action name for Remove Login
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.RemoveLogin(System.String,System.String)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageLoginsAction">
+            <summary>
+            The action name for Manage Logins
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageLogins(System.Nullable{MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageMessageId})">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.LinkLoginAction">
+            <summary>
+            The action name for Link Login
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.LinkLogin(System.String)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.LinkLoginCallbackAction">
+            <summary>
+            The action name for LinkLoginCallback
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.LinkLoginCallback">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ClientChooserAction">
+            <summary>
+            The action name for ClientChooser
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ClientChooser">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.SwitchClientAction">
+            <summary>
+            The action name for SwitchClientAction
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.SwitchClient(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.Dispose(System.Boolean)">
+            <summary>
+            Disposes the object.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageMessageId">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageMessageId.RemoveLoginSuccess">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Auth.SystemUserController.ManageMessageId.Error">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController">
+            <summary>
+            A base controller that requires the user be logged in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.BuildNumber">
+            <summary>
+            The build number for this application.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.AuthUser">
+            <summary>
+            The user who is accessing the site.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.AllowMixedMode">
+            <summary>
+            Does this controller allow mixed mode?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.PublicLogicManager">
+            <summary>
+            Gets the public logic manager for the current request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.Initialize(System.Web.Routing.RequestContext)">
+            <summary>
+            Initialization of the controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.InitializeUser(MNoreke.Public.Auth.SessionAuthUser)">
+            <summary>
+            Initializes the user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.PerformClientLogic">
+            <summary>
+            Performs any application specific client logic for login.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.GetSelectItemList(MNoreke.Public.Ef.ViewModel.ViewModelDropDownList)">
+            <summary>
+            Gets a select item list from a view model drop down list.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.RedirectToLocal(System.String,System.String,System.String)">
+            <summary>
+            Redirects to a local URL.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.View(MNoreke.Public.Utilities.MethodStatus,System.Object)">
+            <summary>
+            Returns the correct view based upon the status.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController.RedirectToAction(MNoreke.Public.Utilities.MethodStatus,System.String,System.String)">
+            <summary>
+            Redirects to an action.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController`1">
+            <summary>
+            A base class that provides authorization for a controller.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController`1.LogicManager">
+            <summary>
+            The logic manager for this controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.BaseAuthorizedController`1.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.Bcm.AddressController">
+            <summary>
+            The address controller.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.Controller">
+            <summary>
+            The name of this controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.ViewAddressesAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.ViewAddresses(System.Nullable{System.Int32})">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.AddAddressAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.AddAddress">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.AddAddress(MNoreke.Public.Ef.ViewModel.Bcm.AddressData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.EditAddressAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.EditAddress(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Bcm.AddressController.EditAddress(MNoreke.Public.Ef.ViewModel.Bcm.AddressData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Controllers.Msg.ForumController">
+            <summary>
+            A controller for the forums
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Msg.ForumController.Controller">
+            <summary>
+            The name of this controller.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Msg.ForumController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Msg.ForumController.ViewForumsAction">
+            <summary>
+            The action name for ViewForums.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Msg.ForumController.ViewForums">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.Controllers.Msg.ForumController.ViewForumAction">
+            <summary>
+            The action name for ViewForum.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Controllers.Msg.ForumController.ViewForum(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.HttpResultCodeOption">
+            <summary>
+            Result Codes
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.HttpResultCodeOption.NotAuthorized403">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Mvc.HttpResultCodeOption.NotFound404">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel.ID">
+            <summary>
+            The ID of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel.Nickname">
+            <summary>
+            The nick name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel.Name">
+            <summary>
+            The name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel.PhoneNumber">
+            <summary>
+            The phone number of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginConfirmationViewModel.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.Account.ExternalLoginListViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.Account.ExternalLoginListViewModel.ReturnUrl">
+            <summary>
+            The URL to return to.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.AuthenticationDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Models.AuthenticationDbContext.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Models.AuthenticationDbContext.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Models.AuthenticationDbContext.SetDefaultConnectionStringName(System.String)">
+            <summary>
+            Sets the default connection string name.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Models.AuthenticationDbContext.Create">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.Identity.ApplicationUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.Models.Identity.ApplicationUser.GenerateUserIdentityAsync(Microsoft.AspNet.Identity.UserManager{MNoreke.Public.Mvc.Models.Identity.ApplicationUser})">
+            <summary>
+            
+            </summary>
+            <param name="manager"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.User.FactorViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.FactorViewModel.Purpose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.User.ManageLoginsViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageLoginsViewModel.CurrentLogins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageLoginsViewModel.OtherLogins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.Models.User.ManageUserViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.SystemUser">
+            <summary>
+            The system user this data is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.Nickname">
+            <summary>
+            The nick name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.Name">
+            <summary>
+            The name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.Logins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Mvc.Models.User.ManageUserViewModel.BrowserRemembered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.MvcExtensions.BasicAuthAttribute">
+            <summary>
+            A based authentication attribute.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.MvcExtensions.BasicAuthAttribute.OnAuthentication(System.Web.Mvc.Filters.AuthenticationContext)">
+            <summary>		
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.MvcExtensions.BasicAuthAttribute.OnAuthenticationChallenge(System.Web.Mvc.Filters.AuthenticationChallengeContext)">
+            <summary>
+            Checks that the user is authenticated.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Mvc.MvcExtensions.ControllerResultCode">
+            <summary>
+            A result to return an HTTP code.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.MvcExtensions.ControllerResultCode.#ctor(MNoreke.Public.Mvc.HttpResultCodeOption)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Mvc.MvcExtensions.ControllerResultCode.ExecuteResult(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Executes the result.
+            </summary>
+        </member>
+        <member name="T:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController">
+            <summary>
+            The controller for managing client activities.
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.Controller">
+            <summary>
+            The name of the controller.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.SignUpAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.SignUp">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.SignUp(MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewEditionsAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewEditions">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewSubscriptionAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewSubscription(System.Nullable{System.Int32})">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditSubscriptionAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditSubscription">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditSubscription(MNoreke.Public.Ef.ViewModel.Saas.ClientData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ChangeEditionAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ChangeEdition">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ChangeEdition(MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditConfigurationAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditConfiguration">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditConfiguration(MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeDataList)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewUsersAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewUsers">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.AddUserAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.AddUser">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.AddUser(MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditUserAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditUser(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.EditUser(MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewEULAAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewEULA">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewTogglesAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ViewToggles">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ManageTogglesAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ManageToggles">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ManageToggles(MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleDataList)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.JoinProgramAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.JoinProgram(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ConfirmJoinProgramAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.ConfirmJoinProgram(System.Int32)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.CancelSubscriptionAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.CancelSubscription">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.CancelSubscription(MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="F:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.UpdateBillingAction">
+            <summary>
+            The name of the specified action.
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.UpdateBilling">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="M:FirkinSense.WebMvc.Controllers.Core.Saas.ClientController.UpdateBilling(MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate)">
+            <summary>
+            Accesses the specified controller endpoint. 
+            </summary>
+        </member>
+        <member name="T:HtmlHelpers">
+            <summary>
+            A collection of HTML helpers.
+            </summary>
+        </member>
+        <member name="M:HtmlHelpers.DisplayNameWithTooltipFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">
+            Code started from SO: 
+            http://stackoverflow.com/questions/6578495/how-do-i-display-the-displayattribute-description-attribute-value
+            <summary>
+            Usage:
+            @Html.DisplayFor(m => m.PropertyName)
+            
+            supply cssclass name, and override span with div tag
+            @Html.DisplayFor(m => m.PropertyName, "desc", "div")
+            
+            using the named param
+            @Html.DisplayFor(m => m.PropertyName, tagName: "div")
+            </summary>
+        </member>
+    </members>
+</doc>

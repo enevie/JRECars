@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Ef.ViewModel</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Ef.ViewModel.AlertView">
+            <summary>
+            An alert to be shown to the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.AlertView.Active">
+            <summary>
+            Is this alert active?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.AlertView.Message">
+            <summary>
+            The message for this alert.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelData">
+            <summary>
+            A module access level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelData.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelData.Sequence">
+            <summary>
+            The sequence for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelData.ModuleID">
+            <summary>
+            The module this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelData.Module">
+            <summary>
+            The module this is for.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.App.AppModuleAccessLevelDataList">
+            <summary>
+            A list of module access levels.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.App.AppModuleData">
+            <summary>
+            A module
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleData.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.App.AppModuleData.Sequence">
+            <summary>
+            The sequence for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData">
+            <summary>
+            A view model for client authorizations.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.CREATE_FIELDS">
+            <summary>
+            The fields to bind on a create action.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.EDIT_FIELDS">
+            <summary>
+            The fields to bind on an edit action.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.GrantingUserIdentifier">
+            <summary>
+            The user that approved the access.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.IsActiveClient">
+            <summary>
+            Is this the currently active client?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.ClientID">
+            <summary>
+            The ID of the client this item is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.SystemUserID">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.SystemUser">
+            <summary>
+            The user this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.IsLastAdministrator">
+            <summary>
+            Is this user the last administrator?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.SystemUsers">
+            <summary>
+            The system users that are available for selecting from.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.AccessLevels">
+            <summary>
+            The system users that are available for selecting from.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationData.CreateDropDownLists">
+            <summary>
+            Creates drop down list data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Auth.ClientAuthorizationDataList">
+            <summary>
+            A list of client authorizations.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData">
+            <summary>
+            A view model for a system user.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.EDIT_FIELDS">
+            <summary>
+            Fields to bind on edit.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.UserIdentifier">
+            <summary>
+            The user key in the security database.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.Nickname">
+            <summary>
+            The nick name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.Name">
+            <summary>
+            The name of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.HideHelpText">
+            <summary>
+            Should help text be hidden?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Auth.SystemUserData.DefaultScheduleDaysToShow">
+            <summary>
+            The default days to show on the schedule.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1">
+            <summary>
+            A base list class.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1.ErrorMessage">
+            <summary>
+            Any error message that came up during processing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1.PageLevel">
+            <summary>
+            The page level.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for deserialization
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBaseList`1.FindByPrimaryKey(System.Int32)">
+            <summary>
+            Finds an item by the primary key.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Bcm.AddressData">
+            <summary>
+            A view model with address data.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.CREATE_FIELDS">
+            <summary>
+            The fields that need to be bound for editing.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.EDIT_FIELDS">
+            <summary>
+            The fields that need to be bound for creation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.AddressLine1">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.AddressLine2">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.City">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.ZipCode">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.State">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.Country">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Bcm.AddressData.GetGoogleMapUrl">
+            <summary>
+            Gets the URL for google maps.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Bcm.AddressDataList">
+            <summary>
+            A list of addresses.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails">
+            <summary>
+            The details for a credit card.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails.Street">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails.City">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails.State">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails.Zip">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingDetails.Country">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem">
+            <summary>
+            The details about a billing line item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.ProductID">
+            <summary>
+            The product ID. This will list as Item on receipts.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.Name">
+            <summary>
+            The Name. This will list as Description on receipts.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.Description">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.Quantity">
+            <summary>
+            The Quantity. This will list as Quantity on receipts.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.UnitPrice">
+            <summary>
+            The Unit Price. This will list as Unit Price on receipts.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.Taxable">
+            <summary />
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItemList">
+            <summary>
+            A list of billing line items.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Billing.BillingLineItemList.AddLineItem(System.String,System.String,System.String,System.Double,System.Int32,System.Boolean)">
+            <summary>
+            Adds a line item to the list.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountType">
+            <summary>
+            The type of checking account
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountType.Checking">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountType.Savings">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails">
+            <summary>
+            The details around a checking account.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.AccountType">
+            <summary>
+            The type of account.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.RoutingNumber">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.RoutingNumberConfirm">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.AccountNumber">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.AccountNumberConfirm">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CheckingAccountDetails.BankName">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.CreditCardDetails">
+            <summary>
+            The details for a credit card.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CreditCardDetails.CardNumber">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CreditCardDetails.ExpirationMonth">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CreditCardDetails.ExpirationYear">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.CreditCardDetails.CardCode">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate">
+            <summary>
+            A template for updating the billing
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate.FIELDS">
+            <summary>
+            The fields to bind.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate.CurrentRoutingNumber">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Billing.UpdateBillingTemplate.CurrentAccountNumber">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.DisplayUtilities">
+            <summary>
+            A collection of display utilities.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.DisplayUtilities.GetDisplayDictionary``1(System.Boolean,``0[])">
+            <summary>
+            Gets a display dictionary for the given type.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData">
+            <summary>
+            A discussion forum.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.DataItemIdentifier">
+            <summary>
+            The data item this discussion forum is tied to.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.ReadAccessLevelID">
+            <summary>
+            The access level to see this notification.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.WriteAccessLevelID">
+            <summary>
+            The access level to see this notification.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.IsPinned">
+            <summary>
+            Is this forum pinned?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.IsAdminLocked">
+            <summary>
+            Is this forum pinned?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.Posts">
+            <summary>
+            How many messages are in this forum?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.LastPost">
+            <summary>
+            When was the last post?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.AppModule">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.ForumEntries">
+            <summary>
+            The Notifications for this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData.CompareTo(MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumData)">
+            <summary>
+            Compares two items for sorting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.DiscussionForumDataList">
+            <summary>
+            A list of discussion forums.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.ForumEntryData">
+            <summary>
+            A forum entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.ForumEntryData.Content">
+            <summary>
+            The content of this comment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.ForumEntryData.Author">
+            <summary>
+            The author of this comment.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.ForumEntryData.Replies">
+            <summary>
+            The comments for this post.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.ForumEntryDataList">
+            <summary>
+            A list of forum entries.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.NotificationData">
+            <summary>
+            A notification to be shown to a user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationData.Message">
+            <summary>
+            The message for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationData.NotificationType">
+            <summary>
+            The NotificationType of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationData.PriorityLevel">
+            <summary>
+            The PriorityLevel of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Msg.NotificationTypeData">
+            <summary>
+            The type of notification.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationTypeData.Name">
+            <summary>
+            The Name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationTypeData.IsDismissable">
+            <summary>
+            Is this notification type dismissable?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Msg.NotificationTypeData.AppModule">
+            <summary>
+            The AppModule of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.PageLevelModel">
+            <summary>
+            A dummy page model
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageLevelModel.Development">
+            <summary>
+            An empty model with the page level set to the indicated level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageLevelModel.Beta">
+            <summary>
+            An empty model with the page level set to the indicated level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageLevelModel.Released">
+            <summary>
+            An empty model with the page level set to the indicated level.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.PageLevelModel.#ctor(MNoreke.Public.Ef.Contracts.PageLevel)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.PageSettings">
+            <summary>
+            The settings for paging.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.PageSettings.FIELDS">
+            <summary>
+            Fields to bind
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.PageSettings.DEFAULT_PAGE_SIZE">
+            <summary>
+            The default page size.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageSettings.Page">
+            <summary>
+            The requested page to view.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageSettings.PageSize">
+            <summary>
+            The page size.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageSettings.CurrentPage">
+            <summary>
+            The page being shown.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageSettings.TotalCount">
+            <summary>
+            The total count.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.PageSettings.Disabled">
+            <summary>
+            A disabled page setting.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.PageSettings.#ctor(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.PageSettings.PageItems``1(System.Linq.IQueryable{``0})">
+            <summary>
+            Pages a data set.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelData">
+            <summary>
+            The information about a dashboard panel entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelData.Name">
+            <summary>
+            Dummy name field for sequencing
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelData.Sequence">
+            <summary>
+            The sequence this entry is shown in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelData.Panel">
+            <summary>
+            The panel to be shown in this dashboard slot.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelData.Days">
+            <summary>
+            The number of days to report on.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelDataList">
+            <summary>
+            A list of dashboard panels.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData">
+            <summary>
+            A type of dashboard panel.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.Description">
+            <summary>
+            The Description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.ReportType">
+            <summary>
+            The report type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.Module">
+            <summary>
+            The module this dashboard panel type is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.AccessLevel">
+            <summary>
+            The access level required to view this dashboard panel type.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData.CompareTo(MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeData)">
+            <summary>
+            Compares two objects.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Presentation.DashboardPanelTypeDataList">
+            <summary>
+            A list of dashboard panel types.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel">
+            <summary>
+            A dashboard view model.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel.Module">
+            <summary>
+            The module this dashboard represents.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel.Panels">
+            <summary>
+            The panels that are on this dashboard.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel.AllowedPanels">
+            <summary>
+            The panels that can be added to this dashboard.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Presentation.DashboardViewModel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData">
+            <summary>
+            A view model for an application feature.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.Availability">
+            <summary>
+            The availability of this status.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.Comment">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.ApplicationFeatureGroupID">
+            <summary>
+            The ApplicationFeatureGroup of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.ApplicationFeatureGroup">
+            <summary>
+            The ApplicationFeatureGroup of this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData.CompareTo(MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureData)">
+            <summary>
+            Compares two objects for sorting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureDataList">
+            <summary>
+            A list of features
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData">
+            <summary>
+            A view model for an application feature group.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData.Features">
+            <summary>
+            The features for this group.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData.CompareTo(MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupData)">
+            <summary>
+            Compares two objects for sorting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ApplicationFeatureGroupDataList">
+            <summary>
+            A list of application feature groups.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData">
+            <summary>
+            The data for a client that is signing up.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.CREATE_FIELDS">
+            <summary>
+            The fields that need to be bound for creation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.EulaAccepted">
+            <summary>
+            Was the Eula accepted?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.Acronym">
+            <summary>
+            The acronym for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.LegalName">
+            <summary>
+            The legal name for this item.
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.CompanyName">
+            <summary>
+            The name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.Website">
+            <summary>
+            The code for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.SubscriptionTypeID">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.SubscriptionLevelID">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.AddressLine1">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.AddressLine2">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.City">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.ZipCode">
+            <summary>
+            The address of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.SubscriptionTypeOptions">
+            <summary>
+            The subscription type options.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.SubscriptionLevelOptions">
+            <summary>
+            The subscription level options.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.ClientSignupData.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryStatus">
+            <summary>
+            The status of a checklist entry.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryStatus.NotConfigured">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryStatus.Partial">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryStatus.Full">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntry">
+            <summary>
+            An entry on the configuration checklist
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntry.Area">
+            <summary>
+            The area this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntry.Status">
+            <summary>
+            The status of this area.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntry.ItemsConfigured">
+            <summary>
+            How configured is this area?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryList">
+            <summary>
+            A list of checklist entries.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryList.Add(System.String,MNoreke.Public.Ef.ViewModel.Saas.CheckListEntryStatus,System.String)">
+            <summary>
+            Adds an item to the list.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData">
+            <summary>
+            The data model for a brewery.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData.FIELDS">
+            <summary>
+            The fields that need to be bound for creation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData.Client">
+            <summary>
+            The client this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientCancellationData.ConfirmCancellation">
+            <summary>
+            Confirm the cancellation?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel">
+            <summary>
+            A view model for changing subscriptions.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel.FIELDS">
+            <summary>
+            The fields to bind.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel.Client">
+            <summary>
+            The client this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel.SubscriptionLevelID">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientChangeSubscriptionModel.SubscriptionLevelOptions">
+            <summary>
+            The subscription level options.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationData">
+            <summary>
+            A class for tracking a client configuration.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationData.FIELDS">
+            <summary>
+            The fields to bind on edit.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationData.IntValue">
+            <summary>
+            The integer value.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationData.BoolValue">
+            <summary>
+            The boolean value.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationDataList">
+            <summary>
+            A list of configurations.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeData">
+            <summary>
+            A class for tracking a client configuration types.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeData.FIELDS">
+            <summary>
+            The fields to bind on edit.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeData.Name">
+            <summary>
+            The name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeData.DataType">
+            <summary/>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeData.Setting">
+            <summary>
+            The current data for this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientConfigurationTypeDataList">
+            <summary>
+            A list of client configuration types.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientData">
+            <summary>
+            The data model for a brewery.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.ClientData.EDIT_FIELDS">
+            <summary>
+            The fields that need to be bound for creation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.Status">
+            <summary>
+            The status of this client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.Acronym">
+            <summary>
+            The acronym for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.LegalName">
+            <summary>
+            The legal name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.CompanyName">
+            <summary>
+            The name for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.Website">
+            <summary>
+            The code for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.SubscriptionType">
+            <summary>
+            The type of subscription this client has.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.CanChangeSubscription">
+            <summary>
+            Can this client change the subscription?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.SubscriptionValidThrough">
+            <summary>
+            The date this client subscription is valid through.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.BillingConfigured">
+            <summary>
+            Is billing configured?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.BillingInterval">
+            <summary>
+            The billing interval
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.Configuration">
+            <summary>
+            The configuration settings for this client.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.Addresses">
+            <summary>
+            The addresses for this subscription.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.IsActive">
+            <summary>
+            Is this the active client for the current user?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.SubscriptionLevelID">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.SubscriptionLevel">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.ProgramMemberships">
+            <summary>
+            The programs this client is a member of.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientData.AvailablePrograms">
+            <summary>
+            The available programs.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientDataList">
+            <summary>
+            A list of client data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData">
+            <summary>
+            A program a client can join.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData.ShortDescription">
+            <summary>
+            The short description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData.PartialViewForDescription">
+            <summary>
+            The name of the partial view for the description of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramData.IsUserSelectable">
+            <summary>
+            Is this program selectable by users?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramDataList">
+            <summary>
+            A list of client programs.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramMembershipData">
+            <summary>
+            The tracking of a client program membership.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramMembershipData.Program">
+            <summary>
+            The program type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramMembershipData.JoinedOn">
+            <summary>
+            What date did this client join this program?
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.ClientProgramMembershipDataList">
+            <summary>
+            A list of client program memberships.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.EditionsViewModel">
+            <summary>
+            A view model for the various editions that are available.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.EditionsViewModel.FeatureGroups">
+            <summary>
+            The feature groups that are available.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.EditionsViewModel.SubscriptionLevels">
+            <summary>
+            The Subscription Levels that are available.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleData">
+            <summary>
+            A class for tracking a feature toggle.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleData.FIELDS_FOR_EDIT">
+            <summary>
+            Fields for editing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleData.ToggleType">
+            <summary>
+            The type of toggle this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleData.ToggleTypeName">
+            <summary>
+            The type of toggle this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleData.IsEnabled">
+            <summary>
+            If this toggle is enabled.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.EnabledFeatureToggleDataList">
+            <summary>
+            A list of feature toggles.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData">
+            <summary>
+            A feature for a subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.Status">
+            <summary>
+            The availability of this status.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.Comment">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.SubscriptionLevelID">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.SubscriptionLevel">
+            <summary>
+            The SubscriptionLevel of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.ApplicationFeatureID">
+            <summary>
+            The ApplicationFeature of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureData.ApplicationFeature">
+            <summary>
+            The ApplicationFeature of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureDataList">
+            <summary>
+            A list of subscription features.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionFeatureDataList.FindByFeatureID(System.Int32)">
+            <summary>
+            Finds an item by the feature ID
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData">
+            <summary>
+            A subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.Sequence">
+            <summary>
+            The sequence of this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.IsSelectable">
+            <summary>
+            Is this entry selectable by a client?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.MonthlyFee">
+            <summary>
+            The monthly fee for this subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.SetupFee">
+            <summary>
+            The setup fee for this subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.MaximumAnnualProductionBBL">
+            <summary>
+            The max production level for this subscription level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.Features">
+            <summary>
+            The Features for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.Toggles">
+            <summary>
+            The Enabled Toggles for this item.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData.CompareTo(MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelData)">
+            <summary>
+            Compares two objects for sorting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionLevelDataList">
+            <summary>
+            A list of subscription levels
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionTypeData">
+            <summary>
+            A view model for subscription types.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.Saas.SubscriptionTypeData.Name">
+            <summary>
+            The name of this item.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.ViewModelBase">
+            <summary>
+            A base class for view models
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.ErrorMessage">
+            <summary>
+            Any error message that came up during processing.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.ID">
+            <summary>
+            The visibility for this entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.ClientID">
+            <summary>
+            The client ID for this entry (if applicable).
+            <para>This is used for validation purposes only.</para>
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.IsSystemEntry">
+            <summary>
+            Is this entry a system entry that clients cannot modify?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.Visibility">
+            <summary>
+            The visibility for this entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.ReturnUrl">
+            <summary>
+            The return URL when done.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.PageLevel">
+            <summary>
+            The page level.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.CreatedDate">
+            <summary>
+            The date this record was created.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelBase.VisibilityOptions">
+            <summary>
+            The storage type options.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBase.CreateDropDownLists">
+            <summary>
+            Creates any enum based drop down lists for this view model.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelBase.GetEnumValuesAsDropDownList``1(System.Boolean,``0[])">
+            <summary>
+            Gets the values of an enumeration as a drop down list source.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.ViewModelDictionary`2">
+            <summary>
+            A view model dictionary.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelDictionary`2.PageLevel">
+            <summary>
+            The page level.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDictionary`2.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry">
+            <summary>
+            An entry in a drop down list.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry.Value">
+            <summary>
+            The key value for this entry.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry.Name">
+            <summary>
+            The name of this entry.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry.#ctor(System.Object,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry.CompareTo(MNoreke.Public.Ef.ViewModel.ViewModelDropDownEntry)">
+            <summary>
+            Compares two objects for sorting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.ViewModel.ViewModelDropDownList">
+            <summary>
+            A list of drop down entries.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.ViewModel.ViewModelDropDownList.DROP_DOWN_NO_SELECTION">
+            <summary>
+            The value to show for no selection in a drop down.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDropDownList.GetIndex(System.Object)">
+            <summary>
+            Gets the index of a value.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDropDownList.Add(System.Object,System.String)">
+            <summary>
+            Adds an entry to the list.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.ViewModel.ViewModelDropDownList.AddNullEntry">
+            <summary>
+            Adds a null entry.
+            </summary>
+        </member>
+    </members>
+</doc>

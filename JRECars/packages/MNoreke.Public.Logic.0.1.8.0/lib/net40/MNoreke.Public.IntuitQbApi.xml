@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.IntuitQbApi</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingRequest`1">
+            <summary>
+            A request to the accounting API.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingRequest`1.DataItem">
+            <summary>
+            The data item for this request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingRequest`1.#ctor(System.Nullable{System.Guid})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingResponse`1">
+            <summary>
+            A request to the accounting API.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingResponse`1.DataItem">
+            <summary>
+            The data item for this request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Transaction.QbAccountingResponse`1.#ctor(MNoreke.Public.IntuitQbApi.Transaction.QbAccountingRequest{`0})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Transaction.QbBaseRequest">
+            <summary>
+            A base request class.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbBaseRequest.RequestID">
+            <summary>
+            The ID of this request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Transaction.QbBaseRequest.#ctor(System.Nullable{System.Guid})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Transaction.QbBaseResponse">
+            <summary>
+            A base response class.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbBaseResponse.RequestID">
+            <summary>
+            The ID of this request.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbBaseResponse.Status">
+            <summary>
+            The status of the operation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Transaction.QbBaseResponse.RestResponse">
+            <summary>
+            The response that was returned from the Rest API.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Transaction.QbBaseResponse.#ctor(MNoreke.Public.IntuitQbApi.Transaction.QbBaseRequest)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbAddress">
+            <summary>
+            An address in the Intuit world.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbAddressList">
+            <summary>
+            A list of addresses.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem">
+            <summary>
+            The base data item for tracking items in the Intuit world.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.ID">
+            <summary>
+            Unique Identifier for an Intuit entity (object). Required for the update operation.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.SyncToken">
+            <summary>
+            Version number of the entity. Required for the update operation. 
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.Active">
+            <summary>
+            If true, this entity is currently enabled for use by QuickBooks.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.SparseUpdate">
+            <summary>
+            Are we doing a partial update?
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.GetJsonDataObject">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItem.UpdateFromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject,System.Boolean)">
+            <summary>
+            Updates this data item from the JSON data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbBaseAccountingItemList`1">
+            <summary>
+            A list of items.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer">
+            <summary>
+            A customer in the Intuit world.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.LegalName">
+            <summary>
+            The legal name of this customer.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.CompanyName">
+            <summary>
+            The name of this customer.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.BillingAddress">
+            <summary>
+            Default billing address. 
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.ShippingAddress">
+            <summary>
+            Default shipping address. 
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.WebAddress">
+            <summary>
+            Website address. 
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.GetJsonDataObject">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.UpdateFromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject,System.Boolean)">
+            <summary>
+            Updates this data item from the JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Accounting.QbCustomer.FromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject)">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Accounting.QbCustomerList">
+            <summary>
+            A list of customers.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItem">
+            <summary>
+            The base data item for tracking items in the Intuit world.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItem.ID">
+            <summary>
+            Unique Identifier for an Intuit entity (object). Required for the update operation.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItem.GetJsonDataObject">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItem.UpdateFromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject,System.Boolean)">
+            <summary>
+            Updates this data item from the JSON data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbBasePaymentsItemList`1">
+            <summary>
+            A list of items.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount">
+            <summary>
+            A checking account.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.CustomerID">
+            <summary>
+            The ID of the customer this account is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.Name">
+            <summary>
+            The name of this account
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.PhoneNumber">
+            <summary>
+            The phone number for the holder of this account
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.RoutingNumber">
+            <summary>
+            The routing number.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.AccountNumber">
+            <summary>
+            The account number.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.AccountType">
+            <summary>
+            The account type.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.IsDefault">
+            <summary>
+            Is this the default account?
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.GetJsonDataObject">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.UpdateFromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject,System.Boolean)">
+            <summary>
+            Updates this data item from the JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccount.FromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject)">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbCheckingAccountList">
+            <summary>
+            A list of checking accounts.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus">
+            <summary>
+            The status of the ECheck
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus.Pending">
+            <summary>
+            The check is pending in the payments API.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus.Succeeded">
+            <summary>
+             The check has been funded and the transaction was successful in the payments API.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus.Declined">
+            <summary>
+            The check was rejected by the payments API.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus.Voided">
+            <summary>
+            The check is voided in the payments API.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.IntuitQbApi.Payments.QbECheckStatus.Refunded">
+            <summary>
+            The check was refunded in the payments API.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbECheck">
+            <summary>
+            An electronic check
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbECheck.Account">
+            <summary>
+            The account this is for.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbECheck.Amount">
+            <summary>
+            The amount of this ECheck
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbECheck.Description">
+            <summary>
+            The description of this ECheck.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbECheck.AuthCode">
+            <summary>
+            The authorization code for this ECheck.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbECheck.Status">
+            <summary>
+            The status of this ECheck.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbECheck.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbECheck.GetJsonDataObject">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbECheck.UpdateFromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject,System.Boolean)">
+            <summary>
+            Updates this data item from the JSON data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbECheck.FromJsonDataObject(MNoreke.Public.RestApiUtil.JsonDataObject)">
+            <summary>
+            Gets a Customer object from JSON data.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbECheckList">
+            <summary>
+            A list of electronic checks
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest`1">
+            <summary>
+            A request to the payments API.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest`1.DataItem">
+            <summary>
+            The data item for this request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest`1.#ctor(System.Nullable{System.Guid})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsResponse`1">
+            <summary>
+            A response from the payments API.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsResponse`1.DataItem">
+            <summary>
+            The data item for this request.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.Payments.QbPaymentsResponse`1.#ctor(MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest{`0})">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QbAccountingApiManager.#ctor(MNoreke.Public.IntuitQbApi.QuickBooksApiManager)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QbAccountingApiManager.GetCustomers(MNoreke.Public.IntuitQbApi.Accounting.QbCustomerList@)">
+            <summary>
+            Gets all customers
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QbPaymentsApiManager.#ctor(MNoreke.Public.IntuitQbApi.QuickBooksApiManager)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QbPaymentsApiManager.BillCustomerViaECheck``1(MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest{``0})">
+            <summary>
+            Bills the customer via ECheck.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.IntuitQbApi.QuickBooksApiManager">
+            <summary>
+            A class to assist with interacting with the QuickBooks API 
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.IsRunningAgainstSandbox">
+            <summary>
+            Are we running against the sandbox? Defaults to true.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.GetAllAccounting``2(``0@)">
+            <summary>
+            Gets all customers
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.UpdateAccountingData``1(MNoreke.Public.IntuitQbApi.Transaction.QbAccountingRequest{``0})">
+            <summary>
+            Sends data to the Accounting API.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.GetAllPayments``2(``1,``0@)">
+            <summary>
+            Gets all customers
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.IntuitQbApi.QuickBooksApiManager.UpdateData``1(MNoreke.Public.IntuitQbApi.Payments.QbPaymentsRequest{``0})">
+            <summary>
+            Sends data to the Accounting API.
+            </summary>
+        </member>
+    </members>
+</doc>

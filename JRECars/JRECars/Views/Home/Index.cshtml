@@ -1,0 +1,40 @@
+﻿@model JRECars.Models.IndexPicturesViewModel
+@{
+    ViewBag.Title = "Home~p";
+    int i = 0;
+}
+
+<script src="~/Scripts/Index/index.js"></script>
+
+<div id="wrapper-pic-screen">
+    <div id="picture-screen">
+        @foreach (var image in Model.ImagePath)
+        {
+            i++;
+            <img src="@Url.Content("~/Content/images/Cars/" + image)" id="front-image-@i" />
+        }
+    </div>
+    <div class="table-row" style="display: table-row;">
+        <div id="conteiner-pic-1" style="display: table-cell; position: relative; width: 550px; height: 270px;">
+            <img src="~/Content/images/Cars/2015-porsche-911-gts.jpg" id="pic-1" class="grid-pics" />
+        </div>
+        <div id="conteiner-pic-2" style="display: table-cell; position: relative; width: 550px; height: 270px;">
+            <img src="~/Content/images/Cars/lamborghini_aventador_49_images.jpg" id="pic-2" class="grid-pics" />
+        </div>
+    </div>
+    <div class="table-row" style="display: table-row">
+        <div id="conteiner-pic-3" style="display: table-cell; position: relative; width: 550px; height: 270px;">
+            <img src="~/Content/images/Cars/images.jpg" class="grid-pics" id="pic-3" />
+        </div>
+        <div id="conteiner-pic-4" style="display: table-cell; position: relative; width: 550px; height: 270px;">
+            <img src="~/Content/images/Cars/7-series-sedan-glance-ts.jpg" id="pic-4" class="grid-pics" />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

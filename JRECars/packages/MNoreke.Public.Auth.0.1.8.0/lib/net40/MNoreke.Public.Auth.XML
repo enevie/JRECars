@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Auth</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Auth.AuthManager">
+            <summary>
+            An authentication manager.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Auth.AuthManager.Context">
+            <summary>
+            The data context we are working against.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.#ctor(MNoreke.Public.Ef.DataModel.MultiTenantDataContext)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.RegisterUser(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Registers the user in the system.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.GetAuthUser(System.String)">
+            <summary>
+            Gets the current client for the specified user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.ChangeActiveClient(System.String,System.Int32,MNoreke.Public.Auth.SessionAuthUser@)">
+            <summary>
+            Changes the active client for the specified user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.GetNewApplicationClientAuthorization(MNoreke.Public.Ef.DataModel.Auth.SystemUser)">
+            <summary>
+            Gets a new application client authorization.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.FindSystemUser(System.String)">
+            <summary>
+            Finds the specified system user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.FindActivePermission(MNoreke.Public.Ef.DataModel.Auth.SystemUser)">
+            <summary>
+            Finds the active permission for the provided user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.AuthManager.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Auth.SessionAuthUser">
+            <summary>
+            An authorized user
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Auth.SessionAuthUser.#ctor(System.String,System.Int32,System.String,System.String,System.Int32,MNoreke.Public.Ef.Contracts.FeatureToggleType[])">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

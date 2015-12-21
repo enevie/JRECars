@@ -1,0 +1,98 @@
+﻿@using Microsoft.Ajax.Utilities
+@{
+    var name = "";
+    var logged = HttpContext.Current.User.Identity.IsAuthenticated;
+
+    if (logged)
+    {
+        name = HttpContext.Current.User.Identity.Name.Split('@')[0];
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRE Motors ~</title>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/layout/mini-menu.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   
+</head>
+
+<body>
+
+    @if (logged)
+    {
+        <h3 id="name-tag">Welcome, @name</h3>
+    }
+    <div id="container">
+        <div id="header">
+            <img src="~/Content/images/race-car-309123_640.png" id="logo" />
+            <a href="/" id="tag">JRE Motors</a>
+            <ul id="navlist">
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        <a href="/StoreManager/">Store</a>
+                    </li>
+                    <li>
+                        @Html.ActionLink("Logout", "LogOff", "Account")
+                    </li>}
+                else
+                {
+                    <li>
+                        <a href="/Account/Register">Register</a>
+                    </li>
+                    <li>
+                        <a href="/Account/Login">Login</a>
+                    </li>}
+
+            </ul>
+        </div>
+
+        <div class="container body-content">
+            <div id="mini-menu">
+                <img src="../../Content/images/right-arrow-icon.png" id="arrow" />
+                <div id="mini-menu-container">
+                    <div id="container-menu-1" style="display: none">
+                        <span class="mini-menu-contact-text">Facebook</span>
+                        <a href="#" class="mini-menu-contact-logo"><img src="../../Content/images/footer-images/Yootheme-Social-Bookmark-Social-facebook-box-blue.ico" style="height: 30px; width: 30px;"/></a>
+                    </div>
+                    <div id="container-menu-2" style="display: none">
+                        <span class="mini-menu-contact-text">Twitter</span>
+                        <a href="#" class="mini-menu-contact-logo"><img src="../../Content/images/footer-images/Martz90-Circle-Twitter.ico" style="height: 30px; width: 30px;"/></a>
+                    </div>
+                    <div id="container-menu-3" style="display: none">
+                        <span class="mini-menu-contact-text">Skype</span>
+                        <a href="#" class="mini-menu-contact-logo"><img src="../../Content/images/footer-images/skype.png" style="height: 30px; width: 30px;"/></a>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+            <hr />
+        </div>
+        <div id="footer">
+            <div id="contacts-footer">
+                <div id="social-media">
+                    <p>Contact us:</p>
+                    <a href="#"><img src="../../Content/images/footer-images/Yootheme-Social-Bookmark-Social-facebook-box-blue.ico" style="height: 30px; width: 30px; " /></a>
+                    <a href="#"><img src="../../Content/images/footer-images/Martz90-Circle-Twitter.ico" style="height: 30px; width: 30px;" /></a>
+                    <a href="#"><img src="../../Content/images/footer-images/skype.png" style="height: 30px; width: 30px;" /></a>
+                </div>
+                <p>&copy; @DateTime.Now.Year - by Yosif Enev F74177 on MVC ASP.NET</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

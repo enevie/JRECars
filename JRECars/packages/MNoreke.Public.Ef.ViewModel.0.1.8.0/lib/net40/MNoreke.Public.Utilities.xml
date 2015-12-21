@@ -1,0 +1,2330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Utilities.CodeGeneration.CodeUtil">
+            <summary>
+            A utility for generating code.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.CodeGeneration.CodeUtil.ConvertToAllowedName(System.String)">
+            <summary>
+            Converts the input string to code by replacing bad characters and converting to valid values.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.BaseList`1">
+            <summary>
+            A base list that allows for a unique list. A unique listed item must implement the generic interface IEquatable(T) 
+            to specify how to compare items if not by the standard method.
+            </summary>
+            <typeparam name="T">The data type that is stored in this list.</typeparam>	
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Collections.BaseList`1.IsReadOnly">
+            <summary>
+            Is this list read only?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Collections.BaseList`1.IsUniqueList">
+            <summary>
+            Is this a unique list?
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for deserialization
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts an item at a specific index.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.Insert(System.Int32,`0)">
+            <summary>
+             Inserts an element into the System.Collections.Generic.List at the specified index.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.Add(System.Object)">
+            <summary>
+            Adds an item to the list.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.Add(`0)">
+            <summary>
+            Adds an object to the end of the BaseList<typeparamref name="T"/>.
+            </summary>
+            <param name="item">The object to be added to the end of the 
+            BaseList<typeparamref name="T"/>. The value can be null for reference types.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.AddRange(`0[])">
+            <summary>
+            Adds the elements to the end of the BaseList<typeparamref name="T"/>. If 
+            the BaseList<typeparamref name="T"/> is a unique list only those object not already in the 
+            list are added to the list.
+            </summary>
+            <param name="items">The collection whose elements should be added to the end of the 
+            BaseList<typeparamref name="T"/>. The collection itself cannot be null, but it can contain elements that 
+            are null, if type T is a reference type.</param>		
+            <exception cref="T:System.ArgumentNullException">Collection is null.</exception>  		
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.BaseList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds the elements of the specified collection to the end of the BaseList<typeparamref name="T"/>. If 
+            the BaseList<typeparamref name="T"/> is a unique list only those object not already in the 
+            list are added to the list.
+            </summary>
+            <param name="items">The collection whose elements should be added to the end of the 
+            BaseList<typeparamref name="T"/>. The collection itself cannot be null, but it can contain elements that 
+            are null, if type T is a reference type.</param>		
+            <exception cref="T:System.ArgumentNullException">Collection is null.</exception>  		
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.DateTimeList">
+            <summary>
+            A list of DateTime objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.DateTimeList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.DateTimeList.#ctor(System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.DecimalList">
+            <summary>
+            A list of decimal objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.DecimalList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.DecimalList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.GuidList">
+            <summary>
+            A list of Guid objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.GuidList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.GuidList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.IntList">
+            <summary>
+            A list of int objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.IntList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.IntList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.LongList">
+            <summary>
+            A list of long objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.LongList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.LongList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.ObjectList">
+            <summary>
+            A list of types.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.ObjectList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.ObjectList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.StringList">
+            <summary>
+            A list of string objects.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.StringList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.StringList.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isUniqueList">Is this a unique list?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.Specific.TypeList">
+            <summary>
+            A list of types.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.TypeList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.Specific.TypeList.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1">
+            <summary>
+            A thread safe enumerator.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1.#ctor(System.Collections.Generic.IEnumerator{`0},System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1.MoveNext">
+            <summary>
+            Moves to the next item in the enumeration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1.Reset">
+            <summary>
+            Resets the enumerator.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1.Current">
+            <summary>
+            The current item on the enumerator.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerator`1.Dispose">
+            <summary>
+            Disposes of the enumerator.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerable`1">
+            <summary>
+            A thread safe enumerable object.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerable`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerable`1.GetEnumerator">
+            <summary>
+            Gets an enumerator.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.ThreadSafeEnumerable`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets an enumerator.
+            </summary>
+            <returns></returns>	
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Collections.UniqueList`1">
+            <summary>
+            A unique list. A unique listed item must implement the generic interface IEquatable(T) 
+            to specify how to compare items if not by the standard method.
+            </summary>
+            <typeparam name="T">The data type that is stored in this list.</typeparam>	
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.UniqueList`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info">SerializationInfo</param>
+            <param name="context">StreamingContext</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Collections.UniqueList`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Cryptography.CryptographyHash">
+            <summary>
+            The different hashes that are supported.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Cryptography.CryptographyHash.SHA1">
+            <summary>
+            Uses Secure Hash Algorithm - 1
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Cryptography.CryptographyHash.SHA256">
+            <summary>
+            Uses Secure Hash Algorithm - 256
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Cryptography.CryptographyHash.SHA384">
+            <summary>
+            Uses Secure Hash Algorithm - 384
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Cryptography.CryptographyHash.SHA512">
+            <summary>
+            Uses Secure Hash Algorithm - 512
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Cryptography.CryptographyUtil">
+            <summary>
+            A collection of methods used for cryptography.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.HashOffset">
+            <summary>
+            The number of characters to offset the hash when encrypting/decrypting data.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.CharLetters">
+            <summary>
+            An array of characters used in the US language
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.MeetsPasswordComplexity(System.String)">
+            <summary>
+            Checks to see if a string meets the password complexiy rule.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.ComputeHash(System.String,System.String,MNoreke.Public.Utilities.Cryptography.CryptographyHash)">
+            <summary>Generates a hash for the given plain text value and returns a base64-encoded result.</summary>
+            <param name="salt">The text to use as a salt.</param>
+            <param name="textToHash">Plaintext value to be hashed.</param>
+            <param name="hashAlgorithm">The algorithm to use.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.VerifyHash(System.String,System.String,MNoreke.Public.Utilities.Cryptography.CryptographyHash,System.String)">
+            <summary>Compares a hash of the specified plain text value to a given hash value.</summary>
+            <param name="textToHash">Plain text to be verified against the specified hash.</param>
+            <param name="hashAlgorithm">The algorithm to use.</param>
+            <param name="compareHash">Base64-encoded hash value produced by ComputeHash function.</param>
+            <param name="salt">Salt text. This parameter can be null, in which case no salt will be used.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.GenerateRandomPassword(System.Int32)">
+            <summary>
+            Generates a random password.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.EncryptString(System.String,System.String)">
+            <summary>
+            Encrypts a string
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.EncryptData(System.String,System.Byte[])">
+            <summary>
+            Encrypts the provided data
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.DecryptString(System.String,System.String)">
+            <summary>
+            Decrypts the string
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.DecryptData(System.String,System.Byte[])">
+            <summary>
+            Decrypts the string
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.GetHashFromFile(System.String,MNoreke.Public.Utilities.Cryptography.CryptographyHash)">
+            <summary>
+            Gets a Hash for a file
+            </summary>
+            <param name="fileName">The name of the file to compute the hash for.</param>
+            <param name="hashAlgorithm">The hash algorithm to use for this computation.</param>
+            <returns>The hash for the file.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.MakeSnkFromPfx(System.String,System.String,System.String)">
+            <summary>
+            Converts .pfx file to .snk file.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Cryptography.CryptographyUtil.SaltStringForHash(System.String,System.String)">
+            <summary>
+            Performs the salting of the string to hash.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.DateTimeUtil">
+            <summary>
+            A utility class for manipulating DateTime objects
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetEffectiveDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets an effective date (starting at HH:MM:SS = 00:00:00 in the day)
+            </summary>
+            <param name="year">The year for the date</param>
+            <param name="month">The month for the date</param>
+            <param name="day">The day for the date</param>
+            <returns>The effective date requested.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetEffectiveDate(System.DateTime)">
+            <summary>
+            Gets an effective date (starting at HH:MM:SS = 00:00:00 in the day)
+            </summary>
+            <param name="date">The date to use</param>
+            <returns>The effective date requested.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetExpirationDate(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets an expiration date (ending at HH:MM:SS = 23:59:59 in the day)
+            </summary>
+            <param name="year">The year for the date</param>
+            <param name="month">The month for the date</param>
+            <param name="day">The day for the date</param>
+            <returns>The expiration date requested.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetExpirationDate(System.DateTime)">
+            <summary>
+            Gets an expiration date (starting at HH:MM:SS = 23:59:59 in the day)
+            </summary>
+            <param name="date">The date to use</param>
+            <returns>The expiration date requested.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetMonthEffectiveDate(System.DateTime)">
+            <summary>
+            Gets the effective date for the provided month.
+            </summary>
+            <param name="date">A date in the month.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetMonthExpirationDate(System.Int32,System.Int32)">
+            <summary>
+            Gets the expiration date for the provided month.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetMonthExpirationDate(System.DateTime)">
+            <summary>
+            Gets the expiration date for the provided month.
+            </summary>
+            <param name="date">A date in the month.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetCalendarYearEffectiveDate(System.Int32)">
+            <summary>
+            Gets the effective date for the provided year.
+            </summary>
+            <param name="year">The calendar year to return.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetCalendarYearExpiratonDate(System.Int32)">
+            <summary>
+            Gets the expiration date for the provided year.
+            </summary>
+            <param name="year">The calendar year to return.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetQuarterEffectiveDate(System.DateTime)">
+            <summary>
+            Gets the effective date in a quarter.
+            </summary>
+            <param name="date">A date in the quarter.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetQuarterExpirationDate(System.DateTime)">
+            <summary>
+            Gets the effective date in a quarter.
+            </summary>
+            <param name="date">A date in the quarter.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DateTimeUtil.GetQuarterNumber(System.DateTime)">
+            <summary>
+            Gets the nubmer of the quarter.
+            </summary>
+            <param name="date">A date in the quarter</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.DistanceMeasurementOption">
+            <summary>
+            The different measurements types that are available.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.DistanceMeasurementOption.Kilometers">
+            <summary>
+            Distance is measured in kilometers
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.DistanceMeasurementOption.Miles">
+            <summary>
+            Distance is measured in Statute Miles
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.DistanceMeasurementOption.NauticalMiles">
+            <summary>
+            Distance is measured in Nautical Miles
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.DistanceUtil">
+            <summary>
+            A distance calculation utility.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DistanceUtil.Distance(System.Double,System.Double,System.Double,System.Double,MNoreke.Public.Utilities.DistanceMeasurementOption)">
+            <summary>
+            Calculates the distance between two points.
+            </summary>
+            <param name="lat1">First Point (in decimal degrees)</param>
+            <param name="lon1">First Point (in decimal degrees)</param>
+            <param name="lat2">Second Point (in decimal degrees)</param>
+            <param name="lon2">Second Point (in decimal degrees)</param>
+            <param name="measurement">The measurement to return.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DistanceUtil.deg2rad(System.Double)">
+            <summary>
+            This function converts decimal degrees to radians
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.DistanceUtil.rad2deg(System.Double)">
+            <summary>
+            This function converts radians to decimal degrees
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.MethodStatus">
+            <summary>
+            The result status of a method.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.MethodStatus.Pass">
+            <summary>
+            The method passed execution.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.MethodStatus.Fail">
+            <summary>
+            The method failed to execute.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.MethodStatus.NotAuthorized">
+            <summary>
+            The user is not authorized to execute this method.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.MethodStatus.InvalidData">
+            <summary>
+            The data provided to the method is invalid.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.DataSortDirection">
+            <summary>
+            The sort direction for data.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.DataSortDirection.Ascending">
+            <summary>
+            Is the data sorted ascending?
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.DataSortDirection.Descending">
+            <summary>
+            Is the data sorted descending
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.EnumUtil">
+            <summary>
+            A utility for enumerations.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.EnumUtil.Parse``1(System.String)">
+            <summary>
+            Parses an enumeration.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.EnumUtil.TryParse``1(System.String,``0@)">
+            <summary>
+            Parses an enumeration.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.EnumUtil.TryParse``1(System.String,``0)">
+            <summary>
+            Parses an enumeration.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventMessage">
+            <summary>
+            The message of an event.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventMessage.Color">
+            <summary>
+            The color of this message
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventMessage.IsNewLine">
+            <summary>
+            Should this message start on a new line?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventMessage.Message">
+            <summary>
+            The message of this notification
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessage.#ctor(MNoreke.Public.Utilities.Events.EventColor,System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="color">The color of this message</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessage.#ctor(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="isNewLine">Should this message start on a new line?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessage.#ctor(System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessage.#ctor(MNoreke.Public.Utilities.Events.EventColor,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="color">The color of this message</param>
+            <param name="isNewLine">Should this message start on a new line?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventMessageList">
+            <summary>
+            The message of an event.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventMessageParameter">
+            <summary>
+            The message of an event.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventMessageParameter.ParameterValue">
+            <summary>
+            The value of the parameter
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessageParameter.#ctor(System.Object,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parameterValue">The value of the parameter.</param>
+            <param name="parameterName">The name of the parameter.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventMessageParameter.SetMessage">
+            <summary>
+            Sets the message based upon the parameter object value.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventColor">
+            <summary>
+            Event notification colors.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Default">
+            <summary>
+            The default color based on the console settings.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.EventDefault">
+            <summary>
+            The default color based on the event level.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Black">
+            <summary>
+            The color black.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkBlue">
+            <summary>
+            The color dark blue.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkGreen">
+            <summary>
+            The color dark green.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkCyan">
+            <summary>
+            The color dark cyan (dark blue-green).
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkRed">
+            <summary>
+            The color dark red.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkMagenta">
+            <summary>
+            The color dark magenta (dark purplish-red).
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkYellow">
+            <summary>
+            The color dark yellow (ochre).
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Gray">
+            <summary>
+            The color gray.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.DarkGray">
+            <summary>
+            The color dark gray.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Blue">
+            <summary>
+            The color blue.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Green">
+            <summary>
+            The color green.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Cyan">
+            <summary>
+            The color cyan (blue-green).
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Red">
+            <summary>
+            The color red.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Magenta">
+            <summary>
+            The color magenta (purplish-red).
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.Yellow">
+            <summary>
+            The color yellow.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventColor.White">
+            <summary>
+            The color white.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventLevel">
+            <summary>
+            The level of the event being fired.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.None">
+            <summary>
+            No messages will be listened to.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.Critical">
+            <summary>
+            This is a critical message
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.Warning">
+            <summary>
+            This is a warning message
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.Informational">
+            <summary>
+            This is an informational message
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.Debug">
+            <summary>
+            This is a debug message.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Events.EventLevel.Trace">
+            <summary>
+            This is a trace message.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventNotification">
+            <summary>
+            Event Notification
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventNotification.Level">
+            <summary>
+            The event level of this notification
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventNotification.AddExtraSpace">
+            <summary>
+            Should there be extra space around this notification?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.EventNotification.Messages">
+            <summary>
+            The message of this notification
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.#ctor(MNoreke.Public.Utilities.Events.EventLevel,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="level">The level of this event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.#ctor(MNoreke.Public.Utilities.Events.EventLevel,System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="level">The level of this event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.#ctor(MNoreke.Public.Utilities.Events.EventLevel,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="level">The level of this event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.AddMessage(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Adds a message to the event notification.
+            </summary>
+            <param name="isNewLine">Should this message start on a new line?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.AddMessage(MNoreke.Public.Utilities.Events.EventColor,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Adds a message to the event notification.
+            </summary>
+            <param name="color">The color of this message</param>
+            <param name="isNewLine">Should this message start on a new line?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.EventNotification.SetParameterMessages">
+            <summary>
+            Sets the parameter messages for this notification.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.EventNotificationHandler">
+            <summary>
+            Event Handler for Notification Events.
+            </summary>
+            <param name="sender">The class or object that is firing the event.</param>
+            <param name="notification">The notificaiton being sent</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.ExceptionNotificationHandler">
+            <summary>
+            Event Handler for Exception Events.
+            </summary>
+            <param name="exceptionStack">The exception to log.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Events.Notifications">
+            <summary>
+            A base class that provides built in notification capabiltities
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.Notifications.EventLevelForDisplay">
+            <summary>
+            The mode the application is running in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Events.Notifications.EventLevelForLogging">
+            <summary>
+            The event level for logging.
+            </summary>
+        </member>
+        <member name="E:MNoreke.Public.Utilities.Events.Notifications.DisplayEvent">
+            <summary>
+            Event handler for display notificaiton of any events that occur within this class.
+            </summary>
+        </member>
+        <member name="E:MNoreke.Public.Utilities.Events.Notifications.LoggingEvent">
+            <summary>
+            Event handler for logging level notificaiton of any events that occur within this class.
+            </summary>
+        </member>
+        <member name="E:MNoreke.Public.Utilities.Events.Notifications.ExceptionEvent">
+            <summary>
+            Event handler for logging exceptions.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireExceptionEvent(System.Object,MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack)">
+            <summary>
+            Fires a critical event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="technolutionException">The exception to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireCriticalEvent(System.Object,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a critical event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireCriticalEvent(System.Object,System.Boolean,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a critical event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireCriticalEvent(System.Object,System.String,System.Object[])">
+            <summary>
+            Fires a critical event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireCriticalEvent(System.Object,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Fires a critical event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireWarningEvent(System.Object,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a warning event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireWarningEvent(System.Object,System.Boolean,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a warning event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireWarningEvent(System.Object,System.String,System.Object[])">
+            <summary>
+            Fires a warning event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireWarningEvent(System.Object,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Fires a warning event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireInformationalEvent(System.Object,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires an informational event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireInformationalEvent(System.Object,System.Boolean,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires an informational event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireInformationalEvent(System.Object,System.String,System.Object[])">
+            <summary>
+            Fires an informational event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireInformationalEvent(System.Object,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Fires an informational event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireDebugEvent(System.Object,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a debug event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireDebugEvent(System.Object,System.Boolean,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a debug event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireDebugEvent(System.Object,System.String,System.Object[])">
+            <summary>
+            Fires a debug event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireDebugEvent(System.Object,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Fires a debug event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireTraceEvent(System.Object,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a trace event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireTraceEvent(System.Object,System.Boolean,MNoreke.Public.Utilities.Events.EventMessage[])">
+            <summary>
+            Fires a trace event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="messages">The messages to notify users about.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireTraceEvent(System.Type,System.String,System.Object[])">
+            <summary>
+            Fires a trace event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireTraceEvent(System.Type,System.Boolean,System.String,System.Object[])">
+            <summary>
+            Fires a trace event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="addExtraSpace">Should there be extra space around this notification?</param>
+            <param name="message">The message to notify users about.</param>
+            <param name="args">The arguements to format into the message.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.FireEvent(System.Object,MNoreke.Public.Utilities.Events.EventNotification,System.Boolean)">
+            <summary>
+            Fires an event for notification of actions.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="notification">The notification to send.</param>
+            <param name="loggingOnly">Only send this to the logging listener.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.GetConsoleColor(MNoreke.Public.Utilities.Events.EventLevel,MNoreke.Public.Utilities.Events.EventColor)">
+            <summary>
+            Gets the console color for this message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.GetHtmlColor(MNoreke.Public.Utilities.Events.EventLevel,MNoreke.Public.Utilities.Events.EventColor)">
+            <summary>
+            Gets the HTML color for this message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.CheckDisplayLevel(MNoreke.Public.Utilities.Events.EventLevel)">
+            <summary>
+            Checks if the specific event level will be sent to the display listeners.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.CheckLoggingLevel(MNoreke.Public.Utilities.Events.EventLevel)">
+            <summary>
+            Checks if the specific event level will be sent to the logging listeners.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.CheckTraceNamespace(System.Type)">
+            <summary>
+            Checks the types namespace to see if trace messages should be sent.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.AddTraceNamespace(System.String)">
+            <summary>
+            Adds a namespace to the trace messages.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Events.Notifications.RemoveTraceNamespace(System.String)">
+            <summary>
+            Removes a namespace from trace messages.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.DataloadException">
+            <summary>
+            An exception caused by an error in the data loading process.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.DataloadException.#ctor(System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">The error that has occured.</param>
+            <param name="args">The arguments to format into the error message.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.DataValidationException">
+            <summary>
+            Data Validation errors.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.DataValidationException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.InvalidCodeException">
+            <summary>
+            An exception caused by invalid code. Please check the message to see what needs to be resolved. This 
+            exception should never occur once development is complete as it is an indication of incorrect code options 
+            such as allowing incorrect filter settings (Ex: Less than on a String).
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.InvalidCodeException.#ctor(System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">The error that has occured.</param>
+            <param name="args">The arguments to format into the error message.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.InvalidConfigurationException">
+            <summary>
+            An exception to indicate an error with the configuration of the system.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.InvalidConfigurationException.#ctor(System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">The error that has occured.</param>
+            <param name="args">The arguments to format into the error message.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.InvalidOptionException">
+            <summary>
+            An exception for an invalid option in an enumeration being encountered.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.InvalidOptionException.#ctor(System.Type,System.Object)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.InvalidServiceException">
+            <summary>
+            Indicates an error when connecting to a service. This may be due to a failure to connect to the service.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.InvalidServiceException.#ctor(System.String,System.Object[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">The error that has occured.</param>
+            <param name="args">The arguments to format into the error message.</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.SeverityOption">
+            <summary>
+            Specifies the severity of an exception.
+            </summary>
+            <remarks>Numbers are spaced by 10 to allow adding items in between later.</remarks>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Exceptions.SeverityOption.Undefined">
+            <summary>
+            Unknown Severity Level
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Exceptions.SeverityOption.Critical">
+            <summary>
+            Functionality Completely Broken
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Exceptions.SeverityOption.NotImplemented">
+            <summary>
+            This functionality is not yet implemented.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Utilities.Exceptions.SeverityOption.Warning">
+            <summary>
+            Exception may have occured due to data quality.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.TechnolutionException">
+            <summary>
+            An exception that has added functionality to log the stack with Parameters.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionException.Severity">
+            <summary>
+            The severity of this exception
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionException.#ctor(System.String,MNoreke.Public.Utilities.Exceptions.SeverityOption)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">The error that has occured.</param>
+            <param name="severity">What is the severity of this exception?</param>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack">
+            <summary>
+            An exception that has added functionality to log the stack with Parameters.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.Message">
+            <summary>
+            override of Message to provide a better error message.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.OriginalMessage">
+            <summary>
+            override of Message to provide a better error message.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.OriginalException">
+            <summary>
+            The inner exception
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.AssemblyName">
+            <summary>
+            The name of the assembly the exception occurred in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.AssemblyVersion">
+            <summary>
+            The version of the assembly the exception occurred in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.CodeClassName">
+            <summary>
+            The class the exception occurred in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.MethodName">
+            <summary>
+            The method the exception occured in.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.LineNumber">
+            <summary>
+            The line number this exception was created on.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.Parameters">
+            <summary>
+            The Parameters that were passed to the method.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.Severity">
+            <summary>
+            The severity of this exception
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.InvertedStack">
+            <summary>
+            The technolution exception stack.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.OriginalToString">
+            <summary>
+            The original ToString representation.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constuctor for deserialization
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.#ctor(System.Exception,MNoreke.Public.Utilities.Exceptions.SeverityOption)">
+            <summary>
+            Constuctor for an exception stack to be logged.
+            </summary>
+            <param name="exception">The exception that was caught.</param>
+            <param name="severity">The severity of this exception.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.GetStackToThrow">
+            <summary>
+            Gets the stack to throw to keep the exception stack intact.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.Configure(System.Exception,MNoreke.Public.Utilities.Exceptions.SeverityOption)">
+            <summary>
+            Configures the exception stack
+            </summary>
+            <param name="innerException">The inner exception that was caught.</param>
+            <param name="severity">The severity of the exception.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.LogParameterValue(System.Object,System.String)">
+            <summary>
+            Adds a parameter and its value to the exception details.
+            </summary>
+            <param name="parameterValue">The value of the parameter.</param>
+            <param name="parameterName">The name of the parameter.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.FindOriginalException">
+            <summary>
+            Finds the original exception (prior to being logged as a stack).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.FindOriginalTechnolutionException">
+            <summary>
+            Finds the original exception (prior to being logged as a stack).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.FindWorstSeverity">
+            <summary>
+            Find the worst severity for this stack.
+            </summary>
+            <returns>The worst severity option.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack.ToString">
+            <summary>
+            Gets a representation of the exception in text format.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.MathUtil">
+            <summary>
+            A utility class for performing math operations.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.MathUtil.Randomizer">
+            <summary>
+            Gets the randomizer for this class.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.MathUtil.Divide(System.Double,System.Double)">
+            <summary>
+            Divides two numbers.
+            </summary>
+            <param name="dividend">The upper number (dividend).</param>
+            <param name="divisor">The lower number (divisor).</param>
+            <returns>The resulting value. A divide by 0 error will return 0.</returns>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.ReflectionUtil">
+            <summary>
+            A utility for simplifying reflection.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.ReflectionUtil.AssemblyRootLocation">
+            <summary>
+            The assembly root location on the system.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Utilities.ReflectionUtil.ApplicationRootLocation">
+            <summary>
+            The application root location on the system.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.IsClassOfType(System.Type,System.Type)">
+            <summary>
+            Checks to see if a class is of a specific type (can be cast to)
+            </summary>
+            <param name="classType">The type of class to look in.</param>
+            <param name="typeToCheck">The base type to check if it is in the classType structure.</param>
+            <returns>The attribute if found.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetClassAttribute(System.Type,System.Type,System.Attribute@)">
+            <summary>
+            Gets an attribute from a class.
+            </summary>
+            <param name="classType">The type of class to look in.</param>
+            <param name="attributeType">The type of attribute to retrieve.</param>
+            <param name="attribute">The attribute if found</param> 
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Object@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.String@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Boolean@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Guid@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Nullable{System.Guid}@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Int32@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Nullable{System.Int32}@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Double@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Nullable{System.Double}@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.DateTime@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetFieldValue(System.Object,System.String,System.Nullable{System.DateTime}@)">
+            <summary>
+            Gets the value from a field.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="fieldName">The name of the field.</param>
+            <param name="fieldValue">The value of the field.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+            Sets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="value">The value to set.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Object@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.String@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Guid@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Boolean@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Int32@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Nullable{System.Int32}@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Double@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Nullable{System.Double}@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Decimal@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Nullable{System.Decimal}@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.DateTime@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyValue(System.Object,System.String,System.Nullable{System.DateTime}@)">
+            <summary>
+            Gets the value from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyValue">The value of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyType(System.Object,System.String,System.Type@)">
+            <summary>
+            Gets the type of a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="propertyType">The type of the property.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPropertyAttribute(System.Object,System.String,System.Type,System.Attribute@)">
+            <summary>
+            Gets an attribute from a property.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The name of the property.</param>
+            <param name="attributeType">The type of attribute to retrieve.</param>
+            <param name="attribute">The attribute if found.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.VerifyInterface(System.Object,System.Type)">
+            <summary>
+            Verifies if an object implements an interface.
+            </summary>
+            <param name="obj">The data object to check.</param>
+            <param name="interfaceType">The type of the interface.</param>
+            <returns>If the object implements the interface.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.FindPropertyInfo(System.Object,System.String,System.Reflection.PropertyInfo@)">
+            <summary>
+            Recursivly finds the property information on an object.
+            </summary>
+            <param name="obj">The object to search.</param>
+            <param name="propertyName">The property to find.</param>
+            <param name="propertyInfo">The property information if found.</param>
+            <returns>The status of the method.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetTypeFromAssembly(System.String,System.String)">
+            <summary>
+            Gets all types from the assembly based on a base type to check.
+            </summary>
+            <param name="assemblyName">The name of the assembly to find.</param>
+            <param name="typeName">The name of the type to find. If no namespace is provided, the assembly name is used.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.FindAssembly(System.String)">
+            <summary>
+            Finds an assembly by name.
+            </summary>
+            <param name="assemblyName">The name of the assembly to find.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetTypesFromAssembly(System.String,System.Type,System.Boolean)">
+            <summary>
+            Gets all types from the assembly based on a base type to check.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetTypesFromAssembly(System.String,System.Type,System.String@,System.Boolean)">
+            <summary>
+            Gets all types from the assembly based on a base type to check.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.CreateInstance``1(System.Type)">
+            <summary>
+            Creates an instance of the specified Type.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetExceptionLoggableText(System.Object)">
+            <summary>
+            Gets the exception loggable text from an object.
+            </summary>
+            <param name="obj">The object to build text for.</param>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.CallMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            Call method on class provided.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.CallStaticMethod(System.Type,System.String,System.Object[])">
+            <summary>
+            Call method on class provided.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetStaticPropertyValue(System.Type,System.String)">
+            <summary>
+            Get the value of a static property.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPublicKey(System.Reflection.Assembly)">
+            <summary>
+            Gets the public key for the assembly passed in.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetPublicKeyToken(System.Reflection.Assembly)">
+            <summary>
+            Gets the public key token for the assembly passed in.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil.GetVersionNumber(System.Type)">
+            <summary>
+            Gets the version number for the specified type.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.ReflectionUtil`1">
+            <summary>
+            A utility for simplifying reflection.
+            </summary>
+            <typeparam name="T">The type we are working against.</typeparam>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.ReflectionUtil`1.ConvertToList(System.Object)">
+            <summary>
+            Converts an object to a list of the specified type.
+            </summary>
+            <param name="obj">The object to convert.</param>
+            <returns>The converted list.</returns>
+        </member>
+        <member name="T:MNoreke.Public.Utilities.SerializationUtil">
+            <summary>
+            A utility class for serializing of data.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.SerializationUtil.SerializeData(System.Object)">
+            <summary>
+            Serializes data to be sent across the wire.
+            <para>Serialization errors of lists may be caused by a missing constructor with the following signature:
+            public [CLASS NAME](SerializationInfo info, StreamingContext context)
+            </para>
+            </summary>
+            <param name="obj">The object to serialize.</param>
+            <returns>The serialized data.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Utilities.SerializationUtil.DeserializeData``1(System.Byte[])">
+            <summary>
+            Deserializes the data from the service back into its original object type.
+            <para>Deserialization errors of lists may be caused by a missing constructor with the following signature:
+            public [CLASS NAME](SerializationInfo info, StreamingContext context)
+            </para>
+            </summary>
+            <typeparam name="T">The type of data we are deserializing.</typeparam>
+            <param name="serializedData">The serialized data.</param>
+            <returns>The deserialized object.</returns>
+        </member>
+        <member name="T:MNoreke.Public.Events.LoggingManagerFileOutputTypeOption">
+            <summary>
+            The output format for logging.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Events.LoggingManagerFileOutputTypeOption.Text">
+            <summary>
+            Text output.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Events.LoggingManagerFileOutputTypeOption.Html">
+            <summary>
+            Partial HTML output.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Events.LoggingManagerBase">
+            <summary>
+            A generic logging manager
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Events.LoggingManagerBase.LogFileName">
+            <summary>
+            The logging file name to be used.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Events.LoggingManagerBase.VersionNumber">
+            <summary>
+            The version number to be added to the log.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Events.LoggingManagerBase.OutputType">
+            <summary>
+            The type of output for file logs.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Events.LoggingManagerBase.#ctor(System.String,System.String,MNoreke.Public.Events.LoggingManagerFileOutputTypeOption)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Events.LoggingManagerBase.LogExceptionToFile(MNoreke.Public.Utilities.Exceptions.TechnolutionExceptionStack)">
+            <summary>
+            Logs an exception to the exception log file. Useful when failure to log to database.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Events.LoggingManagerBase.Notifications_NotificationEvent(System.Object,MNoreke.Public.Utilities.Events.EventNotification)">
+            <summary>
+            The handling of the notification event.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Events.LoggingManagerBase.SaveToLogFile(System.String)">
+            <summary>
+            Saves a log message to the log file.
+            </summary>
+        </member>
+        <member name="T:ByteExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:ByteExtentions.Compare(System.Byte[],System.Byte[])">
+            <summary>
+            Compares two byte[] to see if they are equal.
+            </summary>
+        </member>
+        <member name="M:ByteExtentions.ToStringRepresentation(System.Byte[])">
+            <summary>
+            Converts a byte[] to a string representation.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CollectionsExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:CollectionsExtentions.IsInCollection(System.Object,System.Collections.IEnumerable)">
+            <summary>
+            Allows a quick check to see if the object is in a collection already.
+            </summary>
+            <param name="obj">The object to check</param>
+            <param name="collection">The collection to check</param>
+            <returns>If the object is in the collection.</returns>
+        </member>
+        <member name="M:CollectionsExtentions.OrderBy``1(System.Linq.IQueryable{``0},System.String,MNoreke.Public.Utilities.DataSortDirection)">
+            <summary>
+            Orders the data set.
+            </summary>
+        </member>
+        <member name="M:CollectionsExtentions.OrderByDescending``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            Orders the data set.
+            </summary>
+        </member>
+        <member name="M:CollectionsExtentions.ThenBy``1(System.Linq.IOrderedQueryable{``0},System.String,MNoreke.Public.Utilities.DataSortDirection)">
+            <summary>
+            Orders the data set.
+            </summary>
+        </member>
+        <member name="M:CollectionsExtentions.ThenByDescending``1(System.Linq.IOrderedQueryable{``0},System.String)">
+            <summary>
+            Orders the data set.
+            </summary>
+        </member>
+        <member name="M:CollectionsExtentions.AsLocked``1(System.Collections.Generic.IEnumerable{``0},System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Gets an enumerator in a thread locked state.
+            </summary>
+        </member>
+        <member name="T:EnumExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:EnumExtentions.GetDisplayName(System.Enum)">
+            <summary>
+            Gets the display name from the <seealso cref="T:System.ComponentModel.DataAnnotations.DisplayAttribute"/> for the given value.
+            </summary>
+        </member>
+        <member name="M:EnumExtentions.GetDisplayDescription(System.Enum)">
+            <summary>
+            Gets the display description from the <seealso cref="T:System.ComponentModel.DataAnnotations.DisplayAttribute"/> for the given value.
+            </summary>
+        </member>
+        <member name="M:EnumExtentions.GetAttributeValue``1(System.Enum,System.Func{``0,System.Object})">
+            <summary>
+            Gets the value from an attribute of the given field.
+            </summary>
+            <example>
+            e.GetAttributeValue&gt;DisplayAttribute&lt;(attribute => attribute.Description);
+            </example>
+        </member>
+        <member name="T:FileInfoExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:FileInfoExtentions.EvaluateRelativePath(System.IO.FileInfo,System.IO.FileInfo)">
+            <summary>
+            Evaluates and provides the relative path.
+            </summary>
+            <param name="mainDirPath">The source, or starting location.</param>
+            <param name="absoluteFilePath">The location to find.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NameValueExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:NameValueExtentions.ToDictionary(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Converts the NameValueCollection to a Dictionary.
+            </summary>
+            <param name="obj">The NameValueCollection to convert.</param>
+            <returns>The dictionary representation.</returns>
+        </member>
+        <member name="T:ObjectExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:ObjectExtentions.Clone``1(System.Object)">
+            <summary>
+            Perform a deep Copy of the object
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Type T must be serializaable.</exception>
+            <returns>The cloned object.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToDecimal(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a decimal data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableDecimal(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a decimal data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToDouble(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a double data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableDouble(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a nullable double data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToBoolean(System.Object)">
+            <summary>
+            Converts the object to a boolean data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToByteArray(System.Object)">
+            <summary>
+            Converts the object to a byte array data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToInt32(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a integer data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableInt32(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a nullable integer data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToGuid(System.Object)">
+            <summary>
+            Converts the object to a Guid data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableGuid(System.Object)">
+            <summary>
+            Converts the object to a nullable Guid data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToLong(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a long data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableLong(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a nullable long data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToStringValue(System.Object,System.Boolean)">
+            <summary>
+            Converts the object to a string data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="returnAsNull">Return as null?</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToDateTime(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a DateTime data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableDateTime(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a nullabe DateTime data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToTimeSpan(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a TimeSpan data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToNullableTimeSpan(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts the object to a nullabe DateTime data type.
+            </summary>
+            <param name="value">The object to convert.</param>
+            <param name="culture">The culture to parse the data from.</param>
+            <returns>The converted data value.</returns>
+        </member>
+        <member name="M:ObjectExtentions.ToIntList(System.Object)">
+            <summary>
+            Gets the filter value as an integer list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ObjectExtentions.ToGuidList(System.Object)">
+            <summary>
+            Gets the filter value as a Guid list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StringBuilderExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:StringBuilderExtentions.SaveToFile(System.Text.StringBuilder,System.String,System.Boolean)">
+            <summary>
+            Saves the contents of the string builder to a file.
+            </summary>
+            <param name="sb">The string builder.</param>
+            <param name="filePath">The path to save to.</param>
+            <param name="force">Should we force the save?</param>
+        </member>
+        <member name="T:StringExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:StringExtentions.IsValidUrl(System.String)">
+            <summary>
+            Checks to see if a string is a valid URL.
+            </summary>
+            <param name="inputString">The string to be tested.</param>
+            <returns>If it is a valid url.</returns>
+        </member>
+        <member name="M:StringExtentions.IsValidEmailAddress(System.String)">
+            <summary>
+            Checks to see if a string is a valid email address.
+            </summary>
+            <param name="inputString">The string to be tested.</param>
+            <returns>If it is a valid email address.</returns>
+        </member>
+        <member name="M:StringExtentions.IsNullOrEmptyTrimmed(System.String)">
+            <summary>
+            Checks the string for null, empty, or only "trimmable" characters.
+            </summary>
+            <param name="inputString">The string to check</param>
+            <returns>If the string is null, empty, or only "trimmable" characters.</returns>
+        </member>
+        <member name="M:StringExtentions.IsNotNullOrEmptyTrimmed(System.String)">
+            <summary>
+            Checks the string for null, empty, or only "trimmable" characters. Returns if it is not null.
+            </summary>
+            <param name="inputString">The string to check</param>
+            <returns>If the string is not null, empty, or only "trimmable" characters.</returns>
+        </member>
+        <member name="M:StringExtentions.IsNotNullOrEmpty(System.String)">
+            <summary>
+            Checks the string for null or empty. Returns if it is not null.
+            </summary>
+            <param name="inputString">The string to check</param>
+            <returns>If the string is not null or empty.</returns>
+        </member>
+        <member name="M:StringExtentions.SplitString(System.String,System.Boolean,System.Char[])">
+            <summary>
+            Splits a string into it's element components.
+            </summary>
+            <param name="stringToSplit">The string to split into it's elements.</param>
+            <param name="removeEmptyEntries">Do you want to remove any empty elements?</param>
+            <param name="separator">What are the separators to split by?</param>
+            <returns>An array of elements.</returns>
+        </member>
+        <member name="M:StringExtentions.SplitString(System.String,System.Boolean,System.Boolean,System.Char[])">
+            <summary>
+            Splits a string into it's element components.
+            </summary>
+            <param name="stringToSplit">The string to split into it's elements.</param>
+            <param name="removeEmptyEntries">Do you want to remove any empty elements?</param>
+            <param name="trimResults">Do you want to trim each element as it is processed?</param>
+            <param name="separator">What are the separators to split by?</param>
+            <returns>An array of elements.</returns>
+        </member>
+        <member name="M:StringExtentions.SplitString(System.String,System.Boolean,System.String[])">
+            <summary>
+            Splits a string into it's element components.
+            </summary>
+            <param name="stringToSplit">The string to split into it's elements.</param>
+            <param name="removeEmptyEntries">Do you want to remove any empty elements?</param>
+            <param name="separator">What are the separators to split by?</param>
+            <returns>An array of elements.</returns>
+        </member>
+        <member name="M:StringExtentions.SplitString(System.String,System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            Splits a string into it's element components.
+            </summary>
+            <param name="stringToSplit">The string to split into it's elements.</param>
+            <param name="removeEmptyEntries">Do you want to remove any empty elements?</param>
+            <param name="trimResults">Do you want to trim each element as it is processed?</param>
+            <param name="separator">What are the separators to split by?</param>
+            <returns>An array of elements.</returns>
+        </member>
+        <member name="M:StringExtentions.SplitWords(System.String)">
+            <summary>
+            Splits a string into seperate words based on Camel/Pascal casing rules. 
+            
+            WARNING: This method does not look at acronyms.
+            </summary>
+            <param name="stringToSplit"></param>
+            <returns>The string with spaces added.</returns>
+        </member>
+        <member name="M:StringExtentions.ToIntList(System.String)">
+            <summary>
+            Converts a string to an integer list based on the values in a comma separated list.
+            </summary>
+            <param name="stringToSplit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtentions.ToGuidList(System.String)">
+            <summary>
+            Converts a string to a Guid list based on the values in a comma separated list.
+            </summary>
+            <param name="stringToSplit"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtentions.ToSingular(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Returns the plural of the string.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.ToPlural(System.String)">
+            <summary>
+            Returns the plural of the string.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.ToPascalCase(System.String)">
+            <summary>
+            Converts a string to PascalCase
+            </summary>
+            <param name="stringToConvert">The string to be converted.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtentions.ToCamelCase(System.String)">
+            <summary>
+            Converts a string to camelCase
+            </summary>
+            <param name="stringToConvert">The string to be converted.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StringExtentions.ExtractAlphaCharacters(System.String)">
+            <summary>
+            Extracts alpha characters from a string.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.ExtractAlphaNumericCharacters(System.String)">
+            <summary>
+            Extracts alpha-numeric characters from a string.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.ExtractNumericCharacters(System.String)">
+            <summary>
+            Extracts numeric characters from a string.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.ExtractPhoneNumber(System.String)">
+            <summary>
+            Extracts a phone number, replacing characters with a numeric equivilant.
+            </summary>
+        </member>
+        <member name="M:StringExtentions.TrimStrings(System.String[])">
+            <summary>
+            Trims all of the string contained in the array.
+            </summary>
+            <param name="strings">The strings to trim.</param>
+        </member>
+        <member name="T:TypeExtentions">
+            <summary>
+            A set of extensions to the .net framework. These methods can be called on their 
+            respective objects as if they were part of the .Net framework.
+            
+            One nice thing with extension methods is that they can be used to extend 
+            sealed classes to add functionality when inheritance is not an option.
+            
+            Implementation methods are explained very well in the following blog:
+            http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx
+            </summary>
+        </member>
+        <member name="M:TypeExtentions.IsNotNumeric(System.Type)">
+            <summary>
+            Checks a type to see if it is not a numeric type.
+            </summary>
+            <param name="type">The type to be checked.</param>
+            <returns>If the type is not numeric.</returns>
+        </member>
+        <member name="M:TypeExtentions.IsNumeric(System.Type)">
+            <summary>
+            Checks a type to see if it is a numeric type.
+            </summary>
+            <param name="type">The type to be checked.</param>
+            <returns>If the type is numeric.</returns>
+        </member>
+    </members>
+</doc>

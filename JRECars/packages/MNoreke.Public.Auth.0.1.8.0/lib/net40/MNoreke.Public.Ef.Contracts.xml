@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MNoreke.Public.Ef.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser">
+            <summary>
+            An authorized user
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.HideHelpText">
+            <summary>
+            Does this user want to hide all help text?
+            </summary>		
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.EnabledToggles">
+            <summary>
+            The toggles that are enabled for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.UserPreferences">
+            <summary>
+            The user preferences for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.IdentityID">
+            <summary>
+            The Identity Identifier for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.SystemUserID">
+            <summary>
+            The SystemUserID for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.Nickname">
+            <summary>
+            The Nickname for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.ClientID">
+            <summary>
+            The ClientID for this user.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.OperateAsClientID">
+            <summary>
+            The ClientID this user is emulating. Used by the workflow engine.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.TimeZoneInfo">
+            <summary>
+            The timezone this user wants to see data as.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.IsVisitor">
+            <summary>
+            Is this user a visitor?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.IsAdministrator">
+            <summary>
+            Is this user a system administrator?
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.AccessLevels">
+            <summary>
+            The access levels this user is authorized for.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.#ctor(System.String,System.Int32,System.String,System.String,System.Int32,MNoreke.Public.Ef.Contracts.FeatureToggleType[])">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.IsAuthorized(System.Int32)">
+            <summary>
+            Checks if the user is authorized for the specified module and level.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.GetUserPreference``1(MNoreke.Public.Ef.Contracts.UserPreferenceOption)">
+            <summary>
+            Gets a user preference for this user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.SetUserPreference(MNoreke.Public.Ef.Contracts.UserPreferenceOption,System.Object)">
+            <summary>
+            Sets a user preference for this user.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.IsToggleOn(MNoreke.Public.Ef.Contracts.FeatureToggleType[])">
+            <summary>
+            Is the specified toggle enabled for this client?
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.ConvertDateFromUserToUtc(System.DateTime)">
+            <summary>
+            Converts a date.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.BaseSessionAuthUser.ConvertDateFromUtcToUser(System.DateTime)">
+            <summary>
+            Converts a date.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.CoreConstants">
+            <summary>
+            A set of constants.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.CoreConstants.ApplicationSalt">
+            <summary />
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.CoreConstants.LineItemSetupFeeCodes">
+            <summary>
+            The line item codes that are setup fees.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.SHARED_CLIENT_ID">
+            <summary>
+            The shared client ID.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_STATUS_ACTIVE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_PAYMENT_LINE_ITEM_TYPE_NO_CHARGE_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.BILLING_INTERVAL_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.SUBSCRIPTION_LEVEL_SYSTEM">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.SUBSCRIPTION_TYPE_SYSTEM">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_GLOBAL_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_AUTH_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_SAAS_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_BILLING_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_ADMINISTRATION_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_GLOBAL_ACCESS_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_GLOBAL_ACCESS_READ_ONLY">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_GLOBAL_ACCESS_EDIT">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_GLOBAL_ACCESS_FULL">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_AUTH_ACCESS_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_AUTH_ACCESS_READ_ONLY">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_AUTH_ACCESS_EDIT">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_AUTH_ACCESS_FULL">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_SAAS_ACCESS_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_SAAS_ACCESS_READ_ONLY">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_SAAS_ACCESS_EDIT">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_SAAS_ACCESS_FULL">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_BILLING_ACCESS_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_BILLING_ACCESS_READ_ONLY">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_BILLING_ACCESS_EDIT">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_BILLING_ACCESS_FULL">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_ADMINISTRATION_ACCESS_NONE">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_ADMINISTRATION_ACCESS_READ_ONLY">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_ADMINISTRATION_ACCESS_EDIT">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.MODULE_ADMINISTRATION_ACCESS_FULL">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.NOTIFICATION_NO_BILLING_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.NOTIFICATION_BILLING_FAILED_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.DISCUSSION_FORUM_RELEASE_NOTES_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.DISCUSSION_FORUM_ANNOUNCEMENTS_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_QB_ACCESS_TOKEN">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_QB_ACCESS_TOKEN_SECRET">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_QB_REALM_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_EMAIL_HOST_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_EMAIL_PORT_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_EMAIL_SEND_FROM_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_EMAIL_SEND_PASSWORD_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.CLIENT_CONFIGURATION_EMAIL_ALWAYS_BCC_ID">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.UNIT_OF_MEASURE_DISPLAY_NAME">
+            <summary>
+            The descriptive name of this data type for display attributes.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.UNIT_OF_MEASURE_DISPLAY_DESCRIPTION">
+            <summary>
+            The description of this data type for display attributes.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.PROGRAM_BETA_ID">
+            <summary>
+            The ID of the listed program.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.PROGRAM_EARLY_ADOPTER_ID">
+            <summary>
+            The ID of the listed program.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.DASHBOARD_PANEL_AGENDA_ID">
+            <summary>
+            The ID of the listed dashboard panel.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_DATELINE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_UTC_11">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SAMOA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_HAWAIIAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ALASKAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_PACIFIC_STANDARD_TIME_MEXICO">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_PACIFIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_US_MOUNTAIN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MOUNTAIN_STANDARD_TIME_MEXICO">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MOUNTAIN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_AMERICA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_STANDARD_TIME_MEXICO">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CANADA_CENTRAL_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SA_PACIFIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_EASTERN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_US_EASTERN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_VENEZUELA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_PARAGUAY_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ATLANTIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_BRAZILIAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SA_WESTERN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_PACIFIC_SA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NEWFOUNDLAND_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_E_SOUTH_AMERICA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ARGENTINA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SA_EASTERN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_GREENLAND_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MONTEVIDEO_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_UTC_02">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MID_ATLANTIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_AZORES_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CAPE_VERDE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MOROCCO_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_UTC">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_GMT_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_GREENWICH_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_W_EUROPE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_EUROPE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ROMANCE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_EUROPEAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_W_CENTRAL_AFRICA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NAMIBIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_JORDAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_GTB_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MIDDLE_EAST_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_EGYPT_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SYRIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SOUTH_AFRICA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_FLE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ISRAEL_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_E_EUROPE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ARABIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ARAB_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_RUSSIAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_E_AFRICA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_IRAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ARABIAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_AZERBAIJAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MAURITIUS_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_GEORGIAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CAUCASUS_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_AFGHANISTAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_EKATERINBURG_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_PAKISTAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_WEST_ASIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_INDIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SRI_LANKA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NEPAL_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_ASIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_BANGLADESH_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_N_CENTRAL_ASIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MYANMAR_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SE_ASIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NORTH_ASIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CHINA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NORTH_ASIA_EAST_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_SINGAPORE_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_W_AUSTRALIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_TAIPEI_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_ULAANBAATAR_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_TOKYO_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_KOREA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_YAKUTSK_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CEN_AUSTRALIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_AUS_CENTRAL_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_E_AUSTRALIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_AUS_EASTERN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_WEST_PACIFIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_TASMANIA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_VLADIVOSTOK_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_MAGADAN_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_CENTRAL_PACIFIC_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_NEW_ZEALAND_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_UTC_12">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_FIJI_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_KAMCHATKA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.CoreConstants.TIME_ZONE_TONGA_STANDARD_TIME">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.DataValidation.BaseValidationAttribute">
+            <summary>
+            A base validation attribute.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.DataValidation.BaseValidationAttribute.GetObjectValue``1(System.Object,System.String,``0@)">
+            <summary>
+            Gets the object value.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.DataValidation.MustBeTrueAttribute">
+            <summary>
+            Validation attribute that demands that a <see cref="T:System.Boolean"/> value must be true.
+            </summary>
+            <remarks>
+            <para>Code sample from <c>http://stackoverflow.com/questions/2245185/how-to-handle-booleans-checkboxes-in-asp-net-mvc-2-with-dataannotations</c></para>
+            <para>Thank you <c>http://stackoverflow.com/a/22511718</c></para>
+            </remarks>	
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.DataValidation.MustBeTrueAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MNoreke.Public.Ef.Contracts.DataValidation.MustBeTrueAttribute" /> class.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.DataValidation.MustBeTrueAttribute.IsValid(System.Object)">
+            <summary>
+            Checks to see if the given object in <paramref name="value"/> is <c>true</c>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns><c>true</c> if the object is a <see cref="T:System.Boolean"/> and <c>true</c>; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.DataValidation.MustBeTrueAttribute.GetClientValidationRules(System.Web.Mvc.ModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Returns client validation rules for <see cref="T:System.Boolean"/> values that must be true.
+            </summary>
+            <param name="metadata">The model metadata.</param>
+            <param name="context">The controller context.</param>
+            <returns>The client validation rules for this validator.</returns>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability">
+            <summary>
+            The availability of a feature.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability.Released">
+            <summary>
+            This item is well tested and released.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability.Beta">
+            <summary>
+            This item is in the Beta stage of development.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability.Planning">
+            <summary>
+            This item is in development.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability.Development">
+            <summary>
+            This item is in development.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureAvailability.Roadmap">
+            <summary>
+            This item is on the road map.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus">
+            <summary>
+            The status of a feature.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus.NotIncluded">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus.ContactUs">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus.Potential">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus.ConfigurationOnly">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ApplicationFeatureStatus.Included">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.EmailStatus">
+            <summary>
+            The status of an email.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.EmailStatus.Pending">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.EmailStatus.Sent">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.EmailStatus.Failed">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ClientStatus">
+            <summary>
+            The Client Status options supported by FirkinSense.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientStatus.Active">
+            <summary>
+            This client is currently active.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientStatus.PastDue">
+            <summary>
+            This client is past due on their payments.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientStatus.Cancelled">
+            <summary>
+            This client has canceled their subscription and are inactive after the subscription expires.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ClientPaymentStatus">
+            <summary>
+            The status of a client payment.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientPaymentStatus.Created">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientPaymentStatus.Processing">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientPaymentStatus.PaymentReceived">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientPaymentStatus.Failed">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.ClientPaymentStatus.Complete">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.BillingInterval">
+            <summary>
+            The billing intervals that are supported.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.BillingInterval.Monthly">
+            <summary>
+            Monthly Billing
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.BillingInterval.Annual">
+            <summary>
+            Annual Billing
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.DashboardPanelReportType">
+            <summary>
+            The report type of panels that is on a dashboard.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.DashboardPanelReportType.Historical">
+            <summary>
+            A historical panel.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.DashboardPanelReportType.Current">
+            <summary>
+            A current status panel.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.DashboardPanelReportType.Planned">
+            <summary>
+            A predictive panel.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.FeatureToggleType">
+            <summary>
+            The type of a feature toggle
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.PlanningOnly">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.Brewing">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.InventoryBasic">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.TTBquarterly">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.InventoryIntermediate">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.FeatureToggleType.TTBmonthly">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.PageLevel">
+            <summary>
+            The different page level options supported by this application.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PageLevel.Released">
+            <summary>
+            This page is well tested and released.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PageLevel.Beta">
+            <summary>
+            This page is in the Beta stage of development.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PageLevel.Development">
+            <summary>
+            This page is in development.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.PriorityLevel">
+            <summary>
+            The priority levels supported by the system.
+            </summary>	
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PriorityLevel.Low">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PriorityLevel.Moderate">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PriorityLevel.High">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.PriorityLevel.Urgent">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.RecordVisibility">
+            <summary>
+            The different visibility options supported by the data model.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RecordVisibility.Active">
+            <summary>
+            This record is currently active.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RecordVisibility.Deleted">
+            <summary>
+            This record is deleted and should not be shown to users.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RecordVisibility.Archived">
+            <summary>
+            This record is archived and should not be shown to users except reporting.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.RequiredDataType">
+            <summary>
+            The data type values for configurable items that support multiple data types.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RequiredDataType.Integer">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RequiredDataType.Boolean">
+            <summary/>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.RequiredDataType.String">
+            <summary/>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.UserPreferenceOption">
+            <summary>
+            The different user preferences supported by FirkinSense.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UserPreferenceOption.HideHelpText">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UserPreferenceOption.DefaultScheduleDaysToShow">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.UnitOfMeasure">
+            <summary>
+            The unit of measure for the tracked amount.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeLiter">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeUSGallon">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeBarrels">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeLiquidOunce">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeCup">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeHectoliter">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.VolumeMilliliter">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.WeightKilogram">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.WeightPound">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.WeightOunce">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.WeightGram">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TemperatureKelvin">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TemperatureCelsius">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TemperatureFahrenheit">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.LengthMeter">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.CountEach">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TimeSecond">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TimeMinutes">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TimeHours">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.TimeDays">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.ChemistryMeasuredAmount">
+            <summary />
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasure.ChemistryPh">
+            <summary />
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.UnitOfMeasureType">
+            <summary>
+            The different Unit of Measure types supported by FirkinSense.
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Volume">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Weight">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Temperature">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Length">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Time">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Count">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:MNoreke.Public.Ef.Contracts.UnitOfMeasureType.Chemistry">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.IBaseViewModel">
+            <summary>
+            An interface for items needed to render a page correctly.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.IBaseViewModel.PageLevel">
+            <summary>
+            The page level.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ModelExtensions.DecimalPrecisionAttribute">
+            <summary>
+            An attribute for defining the precision of a decimal.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.ModelExtensions.DecimalPrecisionAttribute.Precision">
+            <summary>
+            The precision (total digits) of this decimal.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.ModelExtensions.DecimalPrecisionAttribute.Scale">
+            <summary>
+            The scale (decimal places) of this decimal.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.ModelExtensions.DecimalPrecisionAttribute.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem">
+            <summary>
+            An interface for a sequenced item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem.Name">
+            <summary>
+            Gets the name of this record.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem.Sequence">
+            <summary>
+            The sequence for this item.
+            </summary>
+        </member>
+        <member name="P:MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem.Visibility">
+            <summary>
+            Gets the visibility of this record.
+            </summary>
+        </member>
+        <member name="T:MNoreke.Public.Ef.Contracts.ModelExtensions.Utilities.SequenceUtil">
+            <summary>
+            A utility class for sequencing.
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.ModelExtensions.Utilities.SequenceUtil.MoveItemUp(System.Collections.Generic.IEnumerable{MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem},System.Int32)">
+            <summary>
+            Moves an item up in the sequence
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.ModelExtensions.Utilities.SequenceUtil.MoveItemDown(System.Collections.Generic.IEnumerable{MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem},System.Int32)">
+            <summary>
+            Moves an item down in the sequence
+            </summary>
+        </member>
+        <member name="M:MNoreke.Public.Ef.Contracts.ModelExtensions.Utilities.SequenceUtil.UpdateSequence(System.Collections.Generic.IEnumerable{MNoreke.Public.Ef.Contracts.ModelExtensions.ISequencedItem},System.Int32@)">
+            <summary>
+            Updates the sequence for the provided items.
+            </summary>
+        </member>
+        <member name="T:UnitOfMeasureExtentions">
+            <summary>
+            Extensions for the Unit of Measure enumeration.
+            </summary>
+        </member>
+        <member name="M:UnitOfMeasureExtentions.GetUnitOfMeasureType(MNoreke.Public.Ef.Contracts.UnitOfMeasure)">
+            <summary>
+            Finds Unit of Measures based upon the type.
+            </summary>
+        </member>
+        <member name="M:UnitOfMeasureExtentions.ConvertTo(MNoreke.Public.Ef.Contracts.UnitOfMeasure,System.Double,System.Int32,MNoreke.Public.Ef.Contracts.UnitOfMeasure)">
+            <summary>
+            Converts from this unit of measure to a different unit of measure.
+            </summary>
+        </member>
+        <member name="T:UnitOfMeasureTypeExtentions">
+            <summary>
+            Extensions for the Unit of Measure Type enumeration.
+            </summary>
+        </member>
+        <member name="M:UnitOfMeasureTypeExtentions.GetUnitOfMeasures(MNoreke.Public.Ef.Contracts.UnitOfMeasureType)">
+            <summary>
+            Finds Unit of Measures based upon the type.
+            </summary>
+        </member>
+    </members>
+</doc>
