@@ -30,19 +30,9 @@ html, body {
     font-style: italic;
 }
 
-#rightImage {
-    width: 100px;
-}
-
-
-#hide {
-    display: none;
-}
-
-
-#car-image-shop {
-    height: 150px;
-    width: 230px;
+#rightImage:hover img {
+    height: 300px;
+    width: 300px;
 }
 
 ul #logoutForm {
@@ -52,17 +42,6 @@ ul #logoutForm {
     padding: 0;
 }
 
-.show-action-links {
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-    left: 50px;
-}
-
-#hide-action-cell {
-    display: none;
-}
 
 #logo {
     width: 150px;
@@ -182,7 +161,6 @@ ul #logoutForm {
 
 .action-links {
     margin-right: 5px;
-    display: none;
 }
 
 #name-tag {
@@ -234,15 +212,12 @@ ul #logoutForm {
 }
 
 
-#table > div.header-row.row-table {
+.header-row {
+    background: #8b8b8b;
     color: #fff;
-    background-color: #55546B;
-    width: 100%;
 }
 
-
-
-.row-table {
+.row {
     display: table-row;
 }
 
@@ -287,7 +262,7 @@ input[type="checkbox"] {
         border-bottom: 2px solid #999;
     }
 
-    .row-table {
+    .row {
         position: relative;
         display: block;
         border-bottom: 1px solid #ccc;
@@ -305,7 +280,6 @@ input[type="checkbox"] {
         line-height: 45px;
         text-align: left;
     }
-
 
     .primary:after {
         content: "";
@@ -463,9 +437,4 @@ input[type="checkbox"] {
     position: absolute;
     display: block;
     margin-left: 60%;
-}
-
-.row-table:hover:not(:first-child) {
-    background-color: #faebd7;
-    cursor: pointer;
 }

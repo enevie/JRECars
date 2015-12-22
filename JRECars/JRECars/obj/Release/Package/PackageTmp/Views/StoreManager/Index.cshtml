@@ -5,7 +5,7 @@
 }
 
 <p id="mini-tags">Cars Catalog</p>
-<script src="~/Scripts/Store/clickTableRow.js"></script>
+
 
 <div class="caption">
     Inventory
@@ -24,23 +24,21 @@
 </div>
 
 <div id="table">
-    <div class="header-row row-table">
+    <div class="header-row row">
+
         <span class="cell primary">Model</span>
         <span class="cell">Price</span>
         <span class="cell">Manufacturer</span>
         <span class="cell">Year of manufacture</span>
         <span class="cell">HP</span>
         <span class="cell">Kilometers</span>
-        <span class="cell">Picture</span>
-        @if (this.User.IsInRole("Admin"))
-        {
-            <span class="cell">Action</span>
-        }
+        <span class="cell">Image</span>
+        <span class="cell">Actions</span>
     </div>
 
     @foreach (var item in Model)
     {
-        <div class="row-table">
+        <div class="row">
             <span class="cell primary" data-label="Model">
                 @Html.DisplayFor(modelItem => item.Model)
             </span>
@@ -60,29 +58,19 @@
                 @Html.DisplayFor(modelItem => item.Kilometers)
             </span>
             <span class="cell" data-label="Image" id="rightImage">
-                <img src=@Url.Action("GetImage", "StoreManager", new {carId = item.CarId}) id="car-image-shop" />
+                <img src=@Url.Action("GetImage", "StoreManager", new {carId = item.CarId}) style="width: 190px; height: 140px; border: 2px solid #ffa500; margin: 10px;" />
             </span>
 
-            @if (this.User.IsInRole("Admin"))
-            {
-                <span class="cell" data-label="Actions">
-                    @Html.ActionLink("Edit", "Edit", new { id = item.CarId }, new { @class = "show-action-links" })
-                    @Html.ActionLink("Delete", "Delete", new { id = item.CarId }, new { @class = "show-action-links" })
-                    @Html.ActionLink("Details", "Details", new { id = item.CarId }, new { @class = "show-action-links" })
-                </span>
-
-
-            }
-            @if (!this.User.IsInRole("Admin"))
-            {
-                <span class="cell" data-label="Actions" id ="hide-action-cell">
-                    @Html.ActionLink("Details", "Details", new { id = item.CarId }, new { @class = "hide" })
-                </span>
+            <span class="cell" data-label="Actions">
+                @if (this.User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CarId }, new { @class = "action-links" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CarId }, new { @class = "action-links" })
 }
+                @Html.ActionLink("Details", "Details", new { id = item.CarId })
+                @*<a href="@Url.Action("AddToCart", "Cart", new {carId = item.CarId})">Add to Cart </a>*@
 
-
-            @*<a href="@Url.Action("AddToCart", "Cart", new {carId = item.CarId})">Add to Cart </a>*@
-
+            </span>
         </div>
     }
 
