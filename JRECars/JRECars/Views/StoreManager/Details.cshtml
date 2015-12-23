@@ -1,7 +1,7 @@
 ﻿@model JRECars.Models.Car
-
 @{
     ViewBag.Title = "Details";
+    var ImagesForTheCar = this.ViewContext.Controller.
 }
 
 <h3>Details offer</h3>
@@ -47,7 +47,7 @@
         </dd>
     </dl>
     <div id="detailed-pic-container">
-            <img src=@Url.Action("GetImage", "StoreManager", new {carId = Model.CarId}) id="details-image"/>
+            <img src=@Url.Action("GetImages", "StoreManager", new {carId = Model.CarId}) id="details-image"/>
     </div>
 </div>
 <p>

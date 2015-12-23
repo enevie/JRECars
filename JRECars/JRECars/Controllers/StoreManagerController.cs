@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using JRECars.Models;
 using JRECars.Managers;
 using Data.Context;
+using System.IO;
 
 namespace CarShop.Controllers
 {
@@ -44,6 +45,23 @@ namespace CarShop.Controllers
 			                 .FirstOrDefault();
 
 			return new FileContentResult(image, "image/jpeg");
+		}
+
+		public IEnumerable<FileContentResult> GetImages(int carId)
+		{
+			var imagesForTheCar = db.Images.Where(x => x.Car.CarId == carId)
+										   .Select(y => y.Image);
+
+			var test = new List<FileContentResult>();
+
+			foreach (var image in imagesForTheCar)
+			{
+				//byte[] newArr = new byte[image];
+				var newFile = new FileContentResult(image, "image/jpeg");
+				test.Add(newFile);
+			}
+
+			return test;
 		}
 
 		// GET: StoreManager/Details/5
