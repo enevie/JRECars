@@ -7,7 +7,6 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using JRECars.Models;
 using System.Data.Entity;
-using Data.Migrations;
 
 namespace JRECars
 {
@@ -15,13 +14,12 @@ namespace JRECars
     {
         protected void Application_Start()
         {
-			Database.SetInitializer<JREMotorsDB>(new AddRoles()); ;
 
 			AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-			Database.SetInitializer(new CreateDatabaseIfNotExists<JREMotorsDB>());
+			Database.SetInitializer(new CreateDatabaseIfNotExists<Data.Context.JREMotorsDB>());
 			
 			
 

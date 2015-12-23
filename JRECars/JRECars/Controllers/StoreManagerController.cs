@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using JRECars.Models;
 using JRECars.Managers;
+using Data.Context;
 
 namespace CarShop.Controllers
 {
@@ -38,10 +39,11 @@ namespace CarShop.Controllers
 
 		public FileContentResult GetImage(int carId)
 		{
-			byte[] image = db.Cars.Where(x=>x.CarId==carId).Select(z=>z.CarImage)
-													    	.FirstOrDefault();
+			byte[] image = db.Images.Where(x => x.Car.CarId == carId)
+				             .Select(z => z.Image)
+			                 .FirstOrDefault();
 
-			return new FileContentResult(image,"image/jpeg");
+			return new FileContentResult(image, "image/jpeg");
 		}
 
 		// GET: StoreManager/Details/5
@@ -99,7 +101,6 @@ namespace CarShop.Controllers
 				
 				var addCar = new Car
 				{
-					CarImage = pathManager.ImageToByteArray(file),
 					YearOfManufacture = car.YearOfManufacture,
 					HorsePower = car.HorsePower,
 					Model = car.Model,
@@ -107,8 +108,14 @@ namespace CarShop.Controllers
 					Kilometers = car.Kilometers,
 					Price =  car.Price
 				};
-			
 
+				var addImage = new Images
+				{
+					Image = pathManager.ImageToByteArray(file),
+					Car = addCar
+				};
+
+				db.Images.Add(addImage);
 				db.Cars.Add(addCar);
 				db.SaveChanges();
 				return RedirectToAction("Index");
@@ -158,7 +165,6 @@ namespace CarShop.Controllers
 				var addCar = new Car
 				{
 					CarId = car.CarId,
-					CarImage = pathManager.ImageToByteArray(file),
 					YearOfManufacture = car.YearOfManufacture,
 					HorsePower = car.HorsePower,
 					Model = car.Model,
@@ -167,6 +173,13 @@ namespace CarShop.Controllers
 					Price = car.Price
 				};
 
+				var addImage = new Images
+				{
+					Car = addCar,
+					Image = pathManager.ImageToByteArray(file)
+				};
+
+				db.Entry(addImage).State = EntityState.Added;
 				db.Entry(addCar).State = EntityState.Modified;
 				db.SaveChanges();
 				return RedirectToAction("Index");

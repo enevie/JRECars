@@ -10,39 +10,12 @@ namespace JRECars
 	public partial class ShopingCartItem
 	{
 		#region Fields
-		private JREMotorsDB db = new JREMotorsDB();
+		private Data.Context.JREMotorsDB db = new Data.Context.JREMotorsDB();
 		public const string CartSessionKey = "CartId";
 		int ShoppingCartId { get; set; }
 
 		#endregion
 
-		public void AddToCart(int carId)
-		{
-			var cartItem = db.ShopingCartItems.FirstOrDefault(c => c.Id == ShoppingCartId && c.CarId == carId);
-
-			if (cartItem == null)
-			{
-				cartItem = new Models.ShopingCartItem
-				{
-					CarId = carId,
-					DateCreated = DateTime.Now,
-					Id = ShoppingCartId,
-					Quantity = 1
-				};
-				db.ShopingCartItems.Add(cartItem);
-			}
-			else
-			{
-				cartItem.Quantity++;
-			}
-			db.SaveChanges();
-
-
-
-
-
-
-		}
 
 		public static ShopingCartItem GetCart(HttpContextBase context)
 		{

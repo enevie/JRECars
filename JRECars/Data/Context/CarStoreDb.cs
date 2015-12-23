@@ -18,6 +18,7 @@ namespace Data.Context
 
 		public DbSet<Manufacturer> Manufacturers { get; set; }
 		public DbSet<Car> Cars { get; set; }
+		public DbSet<Images> Images { get; set; } 
 
 		public class ApplicationUser : IdentityUser
 		{

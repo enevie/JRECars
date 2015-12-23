@@ -33,18 +33,18 @@ namespace JRECars
     }
 
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
-    public class ApplicationUserManager : UserManager<JREMotorsDB.ApplicationUser>
+    public class ApplicationUserManager : UserManager<Data.Context.JREMotorsDB.ApplicationUser>
     {
-        public ApplicationUserManager(IUserStore<JREMotorsDB.ApplicationUser> store)
+        public ApplicationUserManager(IUserStore<Data.Context.JREMotorsDB.ApplicationUser> store)
             : base(store)
         {
         }
 
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
         {
-            var manager = new ApplicationUserManager(new UserStore<JREMotorsDB.ApplicationUser>(context.Get<JREMotorsDB>()));
+            var manager = new ApplicationUserManager(new UserStore<Data.Context.JREMotorsDB.ApplicationUser>(context.Get<Data.Context.JREMotorsDB>()));
             // Configure validation logic for usernames
-            manager.UserValidator = new UserValidator<JREMotorsDB.ApplicationUser>(manager)
+            manager.UserValidator = new UserValidator<Data.Context.JREMotorsDB.ApplicationUser>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
                 RequireUniqueEmail = true
@@ -67,11 +67,11 @@ namespace JRECars
 
             // Register two factor authentication providers. This application uses Phone and Emails as a step of receiving a code for verifying the user
             // You can write your own provider and plug it in here.
-            manager.RegisterTwoFactorProvider("Phone Code", new PhoneNumberTokenProvider<JREMotorsDB.ApplicationUser>
+            manager.RegisterTwoFactorProvider("Phone Code", new PhoneNumberTokenProvider<Data.Context.JREMotorsDB.ApplicationUser>
             {
                 MessageFormat = "Your security code is {0}"
             });
-            manager.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<JREMotorsDB.ApplicationUser>
+            manager.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<Data.Context.JREMotorsDB.ApplicationUser>
             {
                 Subject = "Security Code",
                 BodyFormat = "Your security code is {0}"
@@ -82,21 +82,21 @@ namespace JRECars
             if (dataProtectionProvider != null)
             {
                 manager.UserTokenProvider = 
-                    new DataProtectorTokenProvider<JREMotorsDB.ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
+                    new DataProtectorTokenProvider<Data.Context.JREMotorsDB.ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
             return manager;
         }
     }
 
     // Configure the application sign-in manager which is used in this application.
-    public class ApplicationSignInManager : SignInManager<JREMotorsDB.ApplicationUser, string>
+    public class ApplicationSignInManager : SignInManager<Data.Context.JREMotorsDB.ApplicationUser, string>
     {
         public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
             : base(userManager, authenticationManager)
         {
         }
 
-        public override Task<ClaimsIdentity> CreateUserIdentityAsync(JREMotorsDB.ApplicationUser user)
+        public override Task<ClaimsIdentity> CreateUserIdentityAsync(Data.Context.JREMotorsDB.ApplicationUser user)
         {
             return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
         }

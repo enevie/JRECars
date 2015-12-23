@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h3>Details offer</h3>
 
 <div>
-    <h4>Car</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -25,8 +24,31 @@
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HorsePower)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.HorsePower)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kilometers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kilometers)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YearOfManufacture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearOfManufacture)
+        </dd>
     </dl>
+    <div id="detailed-pic-container">
+            <img src=@Url.Action("GetImage", "StoreManager", new {carId = Model.CarId}) id="details-image"/>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |
