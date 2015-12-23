@@ -1,7 +1,7 @@
 ﻿@model JRECars.Models.Car
 @{
     ViewBag.Title = "Details";
-    var ImagesForTheCar = this.ViewContext.Controller.
+    var imagesForTheCar = ((CarShop.Controllers.StoreManagerController) this.ViewContext.Controller).GetImages(Model.CarId);
 }
 
 <h3>Details offer</h3>
