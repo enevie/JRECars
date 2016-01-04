@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace JRECars.Models
 {
@@ -9,9 +11,10 @@ namespace JRECars.Models
 		public decimal Price { get; set; }
 		public string ManufacturerName { get; set; }
 		public int HorsePower { get; set; }
-		public string YearOfManufacture { get; set; }
+        [Display(Name = "Year of Manufacture")]
+        public string YearOfManufacture { get; set; }
 		public string Kilometers { get; set; }
-		public byte[] CarImage { get; set; }
-		public Manufacturer Manufacturer { get; set; }
+		public string Manufacturer { get; set; }
+        public IEnumerable<byte[]> Images { get; set; }
 	}
 }

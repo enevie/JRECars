@@ -47,21 +47,14 @@ namespace CarShop.Controllers
 			return new FileContentResult(image, "image/jpeg");
 		}
 
-		public IEnumerable<FileContentResult> GetImages(int carId)
+		public IEnumerable<byte[]> GetImages(int carId)
 		{
 			var imagesForTheCar = db.Images.Where(x => x.Car.CarId == carId)
 										   .Select(y => y.Image);
 
-			var test = new List<FileContentResult>();
+			
 
-			foreach (var image in imagesForTheCar)
-			{
-				//byte[] newArr = new byte[image];
-				var newFile = new FileContentResult(image, "image/jpeg");
-				test.Add(newFile);
-			}
-
-			return test;
+			return imagesForTheCar;
 		}
 
 		// GET: StoreManager/Details/5
@@ -76,7 +69,18 @@ namespace CarShop.Controllers
 			{
 				return HttpNotFound();
 			}
-			return View(car);
+
+            var carToView = new CarViewModel
+            {
+                CarId = car.CarId,
+                Model = car.Model,
+                Kilometers = car.Kilometers,
+                HorsePower = car.HorsePower,
+                Images = GetImages(car.CarId),
+                Price = car.Price,
+                Manufacturer = db.Manufacturers.Where(x=>x.ManufacturerId == car.ManufacturerId).Select(y=>y.Name).ToString()
+            };
+			return View(carToView);
 		}
 
 		// GET: StoreManager/Create

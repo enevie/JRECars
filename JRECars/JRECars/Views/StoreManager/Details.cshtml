@@ -1,11 +1,10 @@
-﻿@model JRECars.Models.Car
+﻿@model JRECars.Models.CarViewModel
 @{
     ViewBag.Title = "Details";
-    var imagesForTheCar = ((CarShop.Controllers.StoreManagerController) this.ViewContext.Controller).GetImages(Model.CarId);
 }
 
 <h3>Details offer</h3>
-
+<script src="~/Scripts/Details/ImageSlider.js"></script>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -47,8 +46,19 @@
         </dd>
     </dl>
     <div id="detailed-pic-container">
-            <img src=@Url.Action("GetImages", "StoreManager", new {carId = Model.CarId}) id="details-image"/>
+        <span id ="left-arrow-pic-slider">
+
+        </span>
+        @for (int i = 0; i < Model.Images.Count(); i++)
+        {
+            string base64String = Convert.ToBase64String(Model.Images.ElementAt(i));
+            <img src="@String.Format("data:image/png;base64,{0}", base64String)" style="width: 600px; height: 400px; display: none" id="detailed-pic-container-pic-@i"/>
+        }
+
     </div>
+    <span class="slider-arrows">
+        <img src="~/Content/images/006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" id="right-arrow-pic-slider" />
+    </span>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CarId }) |

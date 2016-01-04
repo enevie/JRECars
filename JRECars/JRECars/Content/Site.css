@@ -483,3 +483,17 @@ input[type="checkbox"] {
     background-color: #faebd7;
     cursor: pointer;
 }
+
+#right-arrow-pic-slider {
+    display: block;
+    height: 40px;
+    width: 40px;
+}
+
+.slider-arrows {
+    position: absolute;
+    display: block;
+    top: 550px;
+    right: 550px;
+}
+

@@ -164,6 +164,7 @@
     <Compile Include="ViewModels\IndexPicturesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\006764-3d-transparent-glass-icon-arrows-arrowhead-solid-right.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\Cars\2015-porsche-911-gts.jpg" />
@@ -189,6 +190,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Details\ImageSlider.js" />
     <Content Include="Scripts\Index\index.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
